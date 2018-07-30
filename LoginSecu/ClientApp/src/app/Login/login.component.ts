@@ -1,25 +1,22 @@
+import { Component, OnInit } from '@angular/core';
+import { ILogin } from '../../../Models/Login';
 
-import { Component, OnInit  } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 
 
-import { ILogin } from '../../models/login';
-
-
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'login-Selector',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
+export class LoginComponent {
   public model: ILogin;
   public user: string;
   public contra: string;
 
   title = 'Escuela Secundaria Técnica #39';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
 
   public ngOnInit() {

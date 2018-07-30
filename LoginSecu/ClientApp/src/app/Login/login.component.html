@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="text-center">
+  <h1 class="title">
+    Bienvenidos a {{title}}
+    <!-- <div> <img   width="1000" alt="Tec Logo" src="..//assets/loginTec39-4.gif">
+    </div> -->
+  </h1>
+  <img width="380" alt="Tec Logo" src="..//assets/logoTec.png">
+</div>
+
+<div class="contenedor-form1" style="text-align:center">
+  <form>
+    <!-- <div class="toggle">
+      <span>crear cuenta</span>
+    </div> -->
+    <label for="iniciar sesion" class="iniciarsesion">Iniciar sesión</label>
+    <div class="input">
+      <input type="text" placeholder=" 🔐 Usuario" class="contenedor btn2 " required [(ngModel)]="user" name="name">
+      <input type="password" placeholder=" 🔐 Contraseña" class="contenedor btn2" required [(ngModel)]="contra" name="contra">
+    </div>
+    <div class="input">
+      <button class="btn btn2" (click)="validation()">Ingresar {{user}} con : {{contra}}</button>
+    </div>
+    <div class="reset-password">
+      <a href="#" class="Contraseña contra">Olvide mi Contraseña</a>
+    </div>
+  </form>
+</div>
+
+
