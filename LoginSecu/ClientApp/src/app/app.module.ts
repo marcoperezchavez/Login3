@@ -34,6 +34,7 @@ import { MatButtonModule } from '@angular/material';
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
+      { path: 'Menu', component: MenuComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],

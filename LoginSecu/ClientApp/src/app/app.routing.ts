@@ -8,7 +8,9 @@ const routes: Routes = [
     path: "",
     component: MenuComponent
   },
-  { path: "Login", redirectTo: "/Login", pathMatch: "full" }
+  { path: "Login", redirectTo: "/Login", pathMatch: "full" },
+  { path: "Menu", redirectTo: "/Menu", pathMatch: "full" },
+  { path: "counter", redirectTo: "/Counter", pathMatch: "full" }
 
 
 ];

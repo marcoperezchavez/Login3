@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'menu-home',
   templateUrl: './Menu.component.html',
 })
 export class MenuComponent {

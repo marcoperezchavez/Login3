@@ -9,7 +9,7 @@ import { Routes, RouterModule, Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   public model: ILogin;
   public user: string;
   public contra: string;
@@ -23,8 +23,8 @@ export class LoginComponent {
   }
 
   public validation() {
-    alert(this.user);
-    this.router.navigate(['./Menu']);
+    
+    this.router.navigate(['/Menu']);
   }
 
 
