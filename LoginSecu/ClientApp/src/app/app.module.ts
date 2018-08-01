@@ -13,7 +13,29 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
+  MatIconRegistry,
+  MatInputModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSnackBarModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatExpansionModule
+} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -30,6 +52,27 @@ import { MatButtonModule } from '@angular/material';
     NoopAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    // Material Design
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatInputModule,
+    MatIconModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatOptionModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatExpansionModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
