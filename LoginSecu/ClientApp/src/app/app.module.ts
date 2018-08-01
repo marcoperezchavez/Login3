@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './Menu/menu.component';
 import { LoginComponent } from './Login/login.component';
 import { CounterComponent } from './counter/counter.component';
@@ -42,6 +43,7 @@ import {
     AppComponent,
     NavMenuComponent,
     HomeComponent,
+    HeaderComponent,
     MenuComponent,
     LoginComponent,
     CounterComponent,

@@ -1,0 +1,1146 @@
+/*header {
+    height: 60px;
+    background: black;
+
+    .logo {
+        margin-left: 50px;
+        position: relative;
+        transform: translate(0px, -50%);
+        top: 50%;
+        float: left;
+    }
+
+    .navigation-menu {
+        position: relative;
+        transform: translate(0px, -50%);
+        top: 50%;
+        float: right;
+        margin-right: 50px;
+
+        a {
+            font-family: 'Helvetica';
+            font-size: 14px;
+            color: white;
+            margin-right: 50px;
+            text-decoration: none;
+        }
+    }
+}*/
+
+/* CSS Document */
+
+
+html, body {
+  font: normal 400 16px "San Francisco", Roboto, Arial, "sans-serif";
+  color: #2a2a2a;
+  margin: 0;
+  padding: 0;
+}
+
+a:link, a:visited {
+  text-decoration: underline;
+  color: #95d2e1;
+  font-weight: 400;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+  color: #95d2e1;
+  font-weight: 400;
+}
+
+a:link.gray_font, a:visited.gray_font {
+  text-decoration: underline;
+  color: #4c4b50;
+  font-weight: 400;
+}
+
+a:link.gold_font, a:visited.gold_font {
+  text-decoration: underline;
+  color: #B59C3D;
+  font-weight: 400;
+}
+
+a:hover.gold_font, a:active.gold_font {
+  text-decoration: underline;
+  color: #bfb58d;
+  font-weight: 400;
+}
+
+a:link.heavy_link, a:visited.heavy_link {
+  text-decoration: none;
+  color: #045C9C;
+  font-weight: bold;
+}
+
+a:hover.heavy_link, a:active.heavy_link {
+  text-decoration: none;
+  color: #95d2e1;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: thin solid #3674A9;
+}
+
+.logo_mobile_nav {
+  width: 72px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 52px;
+  z-index: 1010;
+  transition: all .4s;
+}
+
+.hamburger, .usermenu {
+  background: none;
+  position: absolute;
+  top: 0;
+  line-height: 45px;
+  padding: 12px 16px;
+  color: #B59C3D;
+  border: 0;
+  font-size: 1.75em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 899;
+}
+
+.hamburger {
+  left: 0;
+}
+
+.usermenu {
+  right: 0;
+}
+
+.desktop_nav nav {
+  display: none;
+}
+
+.cross, .cross2 {
+  background: none;
+  position: absolute;
+  top: 0px;
+  line-height: 45px;
+  padding: 13px 16px;
+  color: #fff;
+  border: 0;
+  font-size: 1.75em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 1001;
+  display: none;
+}
+
+.cross {
+  left: 0;
+}
+
+.cross2 {
+  right: 0;
+}
+
+.menu_hamburger {
+  z-index: 999;
+  width: 100%;
+  background: #045C9C;
+  position: absolute;
+  text-align: left;
+}
+
+  .menu_hamburger ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+  }
+
+  .menu_hamburger li {
+    display: block;
+    padding: 0 16px;
+    transition: all 0.3s;
+  }
+
+    .menu_hamburger li:hover {
+      display: block;
+      background: #B59C3D;
+    }
+
+  .menu_hamburger ul li a {
+    text-decoration: none;
+    margin: 0px;
+    color: #fff;
+  }
+
+    .menu_hamburger ul li a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+  .menu_hamburger a {
+    text-decoration: none;
+    font-size: 1.125em;
+    color: #fff;
+  }
+
+    .menu_hamburger a:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+.glyphicon-home {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+
+header {
+  display: inline-block;
+  font-size: 12px;
+}
+
+span {
+  padding-left: 20px;
+}
+
+a {
+  color: #336699;
+}
+
+#payment_full, #payment_confirmed, #accountSummary {
+  background-color: #f6f6f6;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+  #payment_full .content_payment, #payment_confirmed .content_message, #modal_box .content_message, #accountSummary .content_box {
+    padding: .9em;
+    border: 1px solid #85D4E3;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    margin: .5em;
+    box-shadow: 0 2px 3px rgba(0,0,0, 0.2);
+  }
+
+  #payment_full .content_1col, #payment_full .content_2col {
+    width: 98%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+#account_records .account_record {
+  padding: .375em 0;
+  font-size: .875em;
+  color: #4C4B50;
+  cursor: pointer;
+}
+
+.account_number_menu {
+  color: #fff;
+  margin: 8px 16px;
+  font-size: 1.375em;
+}
+
+.display_row {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.display_column {
+  box-sizing: border-box;
+  padding: .375em;
+  display: inline-block;
+}
+
+.display_column_2 {
+  width: 48%;
+  margin: 6px 1.2%;
+}
+
+.display_column_3 {
+  width: 30%;
+  margin: 6px 1.2%;
+}
+
+.display_column_4 {
+  width: 23%;
+  margin: 12px 1.2%;
+}
+
+.paperless_form {
+  width: 96%;
+  margin: 1em auto;
+  max-width: 546px;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.44em;
+}
+
+h1 {
+  color: #B59C3D;
+  font-size: 1.5rem;
+  line-height: 32px;
+  margin: 1em auto .5em;
+  text-align: center;
+}
+
+h2 {
+  color: #B59C3D;
+  font-size: 1.25rem;
+  line-height: 24px;
+  margin: 1em auto .5em;
+  text-align: center;
+}
+
+h3 {
+  color: #B59C3D;
+  font-size: .875rem;
+  line-height: 17px;
+  margin: .625em auto;
+}
+
+h5 {
+  color: #235c97;
+  font-size: .875rem;
+  line-height: 17px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h6 {
+  color: #B59C3D;
+  font-size: .625rem;
+  font-weight: normal;
+  line-height: 1.33em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.blue_font {
+  color: #235c97;
+}
+
+.gold_font {
+  color: #B59C3D;
+}
+
+p.body2 {
+  color: #235c97;
+  font-weight: bold;
+  text-align: center;
+  margin: .625em auto;
+  line-height: 1.33em;
+}
+
+input[type="text"], input[type="date"], .message_text_area {
+  background: #f6f6f6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #4c4b50;
+  padding: .75em .5em;
+  border: 0;
+  border-bottom: 2px solid #235c97;
+  display: block;
+  width: 92%;
+  margin: 1em auto;
+}
+
+.message_text_area {
+  height: 9em;
+}
+
+.radio {
+  font-size: 12px;
+  font-weight: bold;
+  color: #bbbdbf;
+}
+
+  .radio.checked {
+    color: #235c97;
+  }
+
+  .radio .far, #account_records .far {
+    font-size: 133%;
+    vertical-align: middle;
+  }
+
+#account_records .far {
+  color: #015C9C;
+}
+
+#account_info .account_info_symbol {
+  font-size: 1.5em;
+  vertical-align: middle;
+  color: #015C9C;
+  padding: .25em .5em 0 0;
+  float: left;
+  width: 1.5rem;
+}
+
+#account_info .account_info_row {
+  text-align: left;
+  width: 162px;
+  margin: 1em auto;
+}
+
+  #account_info .account_info_row p {
+    margin: 2px 0;
+  }
+
+    #account_info .account_info_row p:nth-child(2) {
+      font-size: 1rem;
+    }
+
+    #account_info .account_info_row p:nth-child(3) {
+      font-size: .875rem;
+      color: #045C9C;
+    }
+
+#current_balance a {
+  font-size: .75em;
+  text-decoration: none;
+}
+
+.amount_label {
+  font-size: 12px;
+  color: #235c97;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.final_payment_label {
+  font-size: 12px;
+  color: #B59C3D;
+  text-align: center;
+  margin: -6px auto 24px;
+}
+
+.amount_due {
+  color: #4C4B50;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 48px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.amount_per_month {
+  color: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  margin: -6px auto 0;
+}
+
+#amountToPay .cc_icon {
+  display: inline-block;
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: .75em;
+}
+
+div#cardImages {
+  width: 320px;
+  list-style: none;
+  margin: 1em 14px;
+  text-align: left;
+}
+
+  div#cardImages div {
+    display: inline-block;
+    width: 36px;
+    margin: 0 34px 0 0;
+    padding: 0;
+  }
+
+    div#cardImages div.row_end {
+      margin: 0;
+    }
+
+    div#cardImages div img {
+      width: 100%;
+      height: auto;
+    }
+
+#presaveAddress {
+  text-align: left;
+  padding-left: 2.5em;
+  font-style: italic;
+  font-weight: 400;
+  color: #235c97;
+  margin-top: 42px;
+}
+
+  #presaveAddress p {
+    margin: .25em 0;
+  }
+
+input[type="button"].btn {
+  background: #B59C3D;
+  padding: .5em 1em;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.33em;
+  border-radius: 2px;
+  transition: background .4s;
+  cursor: pointer;
+}
+
+input[type="button"].btn_primary, input[type="button"].btn_primary_inline {
+  background: #B59C3D;
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 1em auto;
+  transition: .3s background;
+  cursor: pointer;
+}
+
+  input[type="button"].btn_primary:hover, input[type="button"].btn_primary_inline:hover {
+    background: #bfb58d;
+  }
+
+input[type="button"].btn_secondary, input[type="button"].btn_secondary_inline {
+  background: #747279;
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 1em auto;
+  transition: .3s background;
+  cursor: pointer;
+}
+
+  input[type="button"].btn_secondary:hover, input[type="button"].btn_secondary_inline:hover {
+    background: #a6a4ac;
+  }
+
+input[type="text"].paymentDate {
+  width: 80%;
+  display: inline-block;
+}
+
+.authPayment {
+  font-size: 12px;
+}
+
+.account_record_details {
+  font-size: .875em;
+  padding: 1.375em;
+  font-weight: normal;
+  text-align: left;
+  margin-top: .5em;
+  display: none;
+}
+
+.accountData {
+  width: 80%;
+  max-width: 420px;
+  margin: .5em auto;
+}
+
+.account_data_row {
+  padding: .375em 2%;
+  box-sizing: border-box;
+  border-bottom: thin solid #C1B588;
+}
+
+.accountData .confirmHeader, .accountData .confirmField {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.accountData .confirmHeader {
+  width: 56%;
+  text-align: left;
+  color: #015C9C;
+}
+
+.accountData .confirmField {
+  width: 38%;
+  text-align: right;
+  font-weight: bold;
+  padding: .25em 0;
+}
+
+.confirmData .confirmHeader, .confirmData .confirmField {
+  padding: .25em 1em;
+  text-align: left;
+}
+
+.confirmData .confirmHeader {
+  font-weight: bold;
+}
+
+.confirmData .confirmField {
+  color: #747278;
+  border-bottom: 1px solid #C1B588;
+}
+
+.payment_option {
+  width: 172px;
+  margin: 12px auto;
+}
+
+.payment_option_amount {
+  display: inline-block;
+  text-align: center;
+  width: 140px;
+}
+
+.payment_option_check {
+  vertical-align: top;
+  display: inline-block;
+  width: 24px;
+  padding-top: 12px;
+  text-align: right;
+}
+
+#payment_plan_schedule {
+  width: 90%;
+  max-width: 376px;
+  margin: 12px auto 24px;
+  border-top: 1px solid #045c9c;
+  border-bottom: 1px solid #045c9c;
+  padding: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+  #payment_plan_schedule h3 {
+    color: #045c9c;
+  }
+
+.payment_line {
+  padding: 4px 0;
+  border-bottom: 1px solid #bbbdbf;
+}
+
+  .payment_line .payment_line_date, .payment_line .payment_line_amount {
+    width: 49%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .payment_line .payment_line_date {
+    text-align: left;
+    color: #235c97;
+  }
+
+  .payment_line .payment_line_amount {
+    text-align: right;
+    font-weight: bold;
+  }
+/* ---- CLEARFIX ----- */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+::placeholder {
+  color: #4c4b50;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #4c4b50;
+}
+
+::-ms-input-placeholder {
+  color: #4c4b50;
+}
+
+br, .add_4 {
+  display: none;
+}
+
+.disclaimer {
+  font-size: 12px;
+}
+
+#new_address, #checking_account, #contact_by_phone, #consent_disclaimer, .menu_nav {
+  display: none;
+}
+/* -------------------for tablet landscape and above ------------------- */
+@media screen and (min-width: 992px) {
+  html, body {
+    font: normal 400 16px "Helvetica Neue", Roboto, Arial, "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #4c4b50;
+  }
+
+  .hamburger, .usermenu, .cross, .cross2, .menu_hamburger {
+    display: none;
+  }
+
+  .desktop_nav {
+    margin: 0 auto;
+    position: relative;
+    max-width: 826px;
+  }
+
+    .desktop_nav nav {
+      display: block;
+      width: 600px;
+      float: right;
+      text-align: right;
+    }
+
+      .desktop_nav nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+        .desktop_nav nav ul a {
+          float: right;
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+        }
+
+          .desktop_nav nav ul a li {
+            background: #fff;
+            color: #917A24;
+            text-align: left;
+            padding: 0 2em;
+            transition: all .3s;
+            line-height: 48px;
+            padding-top: 9px;
+          }
+
+            .desktop_nav nav ul a li:hover, .desktop_nav nav ul a li:active {
+              background: #917A24;
+              color: #fff;
+            }
+
+            .desktop_nav nav ul a li:active {
+              background: #917A24;
+              color: #fff;
+            }
+
+            .desktop_nav nav ul a li:visited {
+              background: #fff;
+              color: #917A24;
+            }
+
+      .desktop_nav nav .open {
+        background: #917A24;
+        color: #fff;
+      }
+
+  .logo_mobile_nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 10px;
+  }
+
+  .menu_nav {
+    background: #917A24;
+    color: #fff;
+    position: absolute;
+    text-align: left;
+    display: none;
+    width: 200px;
+  }
+
+  #menu_personal.menu_nav {
+    z-index: 999;
+    top: 59px;
+    left: 376px;
+  }
+
+  .menu_nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+  }
+
+  .menu_nav li {
+    display: block;
+    padding: 0 16px;
+    transition: all 0.3s;
+  }
+
+    .menu_nav li:hover {
+      display: block;
+      background: #045C9C;
+    }
+
+  .menu_nav ul li a {
+    text-decoration: none;
+    margin: 0px;
+    color: #fff;
+  }
+
+    .menu_nav ul li a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+  .menu_nav a {
+    text-decoration: none;
+    font-size: 1.125em;
+    color: #fff;
+  }
+
+    .menu_nav a:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  h6 {
+    font-size: .875em;
+  }
+
+  #payment_full .content_payment {
+    padding: 0 42px;
+    border: 1px solid #85D4E3;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 3px 0 rgba(80, 128, 137, 0.33);
+    box-sizing: border-box;
+    margin: 20px auto;
+    max-width: 826px;
+  }
+
+  #payment_confirmed .content_message, #modal_box .content_message {
+    padding: 0 42px 12px;
+    border: 1px solid #85D4E3;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 3px 0 rgba(80, 128, 137, 0.33);
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: 474px;
+  }
+
+  #modal_box .content_message {
+    text-align: left;
+  }
+
+  #payment_full .content_1col {
+    width: 329px;
+    text-align: left;
+  }
+
+  #payment_full .divider {
+    display: block;
+    height: 192px;
+    margin-top: 66px;
+    margin-left: 40px;
+    padding-left: 36px;
+    border-left: 2px solid #b59c3d;
+  }
+
+  #payment_full .content_2col {
+    width: 100%;
+    text-align: center;
+    margin: 1.75em auto;
+  }
+
+  .payment_option {
+    width: 172px;
+    margin: 1em 2em;
+    display: inline-block;
+  }
+
+  #accountSummary .content_box, #record_header, #infoAndBalance {
+    width: 80%;
+    max-width: 826px;
+    margin: .5em auto;
+  }
+
+  #accountSummary #account_info.content_box, #accountSummary #current_balance.content_box {
+    float: left;
+    min-height: 232px;
+    box-sizing: border-box;
+  }
+
+  #accountSummary #account_info.content_box {
+    width: 316px;
+    margin-right: 10px;
+  }
+
+  #accountSummary #current_balance.content_box {
+    width: 500px;
+  }
+
+  .account_record_details {
+    margin: .25em 4em;
+  }
+
+    .account_record_details h5, .account_record_details h6 {
+      display: none;
+      font-size: 0;
+      height: 0;
+    }
+
+  #account_info .account_info_row {
+    margin: 1.875em auto;
+  }
+
+  .account_record_details {
+    border-top: thin solid #85D4E3;
+  }
+
+    .account_record_details p, .account_record_details .accountData {
+      width: 40%;
+      margin: .5em 4.5%;
+      float: left;
+    }
+
+    .account_record_details .accountData {
+      border-left: thin solid #B59C3D;
+      padding-left: 4.5%;
+      margin-left: 0;
+    }
+
+  .display_column_3.squeeze_4 {
+    width: 21.5%;
+    margin: .5em 1%;
+    font-weight: bold;
+  }
+
+  .add_4 {
+    display: inline-block;
+  }
+
+  #form_choose_amount, #form_choose_date {
+    width: 44%;
+    float: left;
+    margin-left: 4%;
+  }
+
+  div#cardImages div {
+    width: 43px;
+    margin: 0 42px 0 0;
+  }
+
+  input[type="text"], .message_text_area {
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    margin: .75em auto;
+  }
+
+    input[type="text"].paymentDate {
+      width: 236px;
+    }
+
+    input[type="text"].paymentAmount {
+      width: 278px;
+    }
+
+    input[type="text"].half_col {
+      width: 48%;
+      margin-right: 2%;
+    }
+
+      input[type="text"].half_col.row_end {
+        margin-right: 0;
+      }
+
+  input[type="button"].btn {
+    padding: .5em 2em;
+  }
+
+  input[type="button"].btn_primary {
+    min-width: 280px;
+  }
+
+  input[type="button"].btn_primary_inline, input[type="button"].btn_secondary_inline {
+    display: inline-block;
+    width: 47%;
+    max-width: 182px;
+  }
+
+  .inline_spacing {
+    margin-right: 1em !important;
+  }
+
+  .float-down-here {
+    float: left;
+  }
+
+  p.body2 {
+    font-size: 14px;
+  }
+
+  .confirmData {
+    width: 308px;
+    margin: 1em auto 2em;
+    box-sizing: border-box;
+  }
+
+    .confirmData .confirmHeader, .confirmData .confirmField {
+      width: 152px;
+      font-size: 14px;
+      margin: 6px 0;
+      float: left;
+      text-align: right;
+      padding: 0;
+    }
+
+    .confirmData .confirmField {
+      border-bottom: none;
+    }
+
+  .paperless_form {
+    max-width: 338px;
+  }
+
+  #payment_plan_schedule {
+    padding: .5em 3.5em 1.5em;
+  }
+
+  br {
+    display: inline;
+  }
+}
+
+.justify_left {
+  text-align: left !important;
+}
+
+.justify_center {
+  text-align: center !important;
+}
+
+.justify_right {
+  text-align: right !important;
+}
+
+.cdk-overlay-pane {
+  margin-top: 55px;
+}
+
+#menu_tab_personal {
+  height: 58px;
+  width: 27%;
+}
+
+#Personal-content-li {
+  height: 100%;
+  margin-top: -2px;
+}
+
+#personal-text {
+}
+
+.mat-form-field {
+  width: 100%;
+  text-align: right;
+  height: 18px;
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.cdk-overlay-pane {
+  margin-top: 50px;
+}
+
+
+
+
+.fondonegro {
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: #B59C3D;
+  height: 43px;
+  width: 100%;
+  color: white;
+  font-family: 'Helvetica';
+  font-size: 12px;
+
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.left-footer {
+  margin-top: 14px;
+  text-align: left;
+  padding-left: 30px;
+
+a{
+  padding-right: 30px;
+  color: white;
+}
+
+}
+
+.right-footer {
+  margin-top: 14px;
+  text-align: right;
+  padding-right: 30px;
+
+
+span{
+  margin-right: 15px;
+}
+
+img {
+  height: 20px;
+}
+
+}
+}

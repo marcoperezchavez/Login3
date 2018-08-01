@@ -16,6 +16,11 @@ export class AppComponent {
   public model: ILogin;
   public user: string;
   public contra: string;
+  public show: boolean = false;
+  public showB: boolean = false;
+  public buttonName: any = 'Show';
+  public isMainMenu: boolean = true;
+
 
   title = 'Escuela Secundaria Técnica #39';
 
@@ -27,8 +32,11 @@ export class AppComponent {
 
   public validation() {
     alert(this.user);
+   this.isMainMenu=false;
     this.router.navigate(['./Menu']);
   }
-
+  toggle() {
+    this.show = !this.show;
+  }
 
 }
