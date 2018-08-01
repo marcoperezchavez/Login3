@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>2126E5EB-9FCB-4988-9C38-F58E6A3F8D45</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04.00.11-[User]-[Payment-Full]." transform="translate(-173.000000, -298.000000)">
+            <rect fill="#F6F6F6" x="0" y="0" width="1024" height="775"></rect>
+            <g id="Group" transform="translate(146.000000, 258.000000)">
+                <g id="Payment-Method">
+                    <g id="Group-9">
+                        <g id="ic_creditcard_unactive" transform="translate(28.000000, 41.000000)">
+                            <rect id="Background" x="0" y="0" width="22" height="16"></rect>
+                            <g id="ic_credit-card" stroke="#BBBDBF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect id="Rectangle-path" x="0" y="0" width="22" height="16" rx="2"></rect>
+                                <path d="M0,6 L22,6" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

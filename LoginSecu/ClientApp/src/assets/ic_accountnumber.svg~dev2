@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>4B92596C-7672-4EF2-9AF4-8CF4E9089F56</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03.00.00-[User]-[Account-Summary]." transform="translate(-124.000000, -338.000000)">
+            <rect fill="#F6F6F6" x="0" y="0" width="1024" height="740"></rect>
+            <g id="Icons/ic_accountnumber" transform="translate(125.000000, 339.000000)">
+                <rect id="Background" x="0" y="0" width="20" height="15"></rect>
+                <g stroke="#015C9C" stroke-linecap="round" stroke-linejoin="round">
+                    <rect id="Rectangle-path" stroke-width="2" x="0" y="0" width="19.6428571" height="14.2857143" rx="2"></rect>
+                    <path d="M0,5.35714286 L19.6428571,5.35714286" id="Shape" stroke-width="2"></path>
+                    <path d="M7.85714286,8.75 L12.1428571,8.75" id="Shape"></path>
+                    <path d="M7.85714286,10.3571429 L12.1428571,10.3571429" id="Shape"></path>
+                    <path d="M9.46428571,7.14285714 L8.92857143,11.9642857" id="Shape"></path>
+                    <path d="M11.0714286,7.14285714 L10.5357143,11.9642857" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

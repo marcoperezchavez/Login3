@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>9D36B04E-5295-4E19-AF0B-F74D053107B4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04.00.11-[User]-[Payment-Full]." transform="translate(-333.000000, -297.000000)">
+            <rect fill="#F6F6F6" x="0" y="0" width="1024" height="775"></rect>
+            <g id="Group" transform="translate(146.000000, 258.000000)">
+                <g id="Payment-Method">
+                    <g id="Group-9">
+                        <g id="ic_checking_active" transform="translate(188.000000, 40.000000)">
+                            <rect id="Background" x="0" y="0" width="22" height="16"></rect>
+                            <g>
+                                <rect id="Rectangle-path-Copy" stroke="#1A6CA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="0" y="0" width="22" height="16" rx="2"></rect>
+                                <rect id="Rectangle-2" fill="#1A6CA6" x="3" y="3" width="4" height="4" rx="1"></rect>
+                                <rect id="Rectangle-3" fill="#1A6CA6" x="9" y="3" width="11" height="4" rx="1"></rect>
+                                <rect id="Rectangle-3-Copy" fill="#1A6CA6" x="2" y="10" width="18" height="4" rx="1"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
