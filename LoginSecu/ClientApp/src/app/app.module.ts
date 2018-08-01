@@ -37,6 +37,11 @@ import {
   MatTooltipModule,
   MatExpansionModule
 } from "@angular/material";
+import { RegistrarComponent } from './registrar/registrar.component';
+import { BorrarComponent } from './borrar/borrar.component';
+import { InsertarComponent } from './insertar/insertar.component';
+import { ModificarComponent } from './modificar/modificar.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +52,12 @@ import {
     MenuComponent,
     LoginComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    RegistrarComponent,
+    BorrarComponent,
+    InsertarComponent,
+    ModificarComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

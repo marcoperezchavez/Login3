@@ -6,13 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./Menu.component.css']
 })
 export class MenuComponent {
-  public isMainMenu: boolean = false;
-
-
-
   public ngOnInit() {
   }
-
-
- 
 }
