@@ -1,16 +1,16 @@
 <header-Selector></header-Selector>
 
-<div ng-switch="selection">
-  <div ng-switch-when="insertar">
+<div [ngSwitch]="header.selection">
+  <div *ngSwitchCase="'insertar'">
     <app-insertar></app-insertar>
   </div>
-  <div ng-switch-when="eliminar">
+  <div *ngSwitchCase="'eliminar'">
     <app-borrar></app-borrar>
   </div>
-  <div ng-switch-when="modificar">
+  <div *ngSwitchCase="'modificar'">
     <app-modificar></app-modificar>
   </div>
-  <div ng-switch-when="seleccionar">
-    <app-seleccionar></app-seleccionar>
+  <div *ngSwitchCase="'seleccionar'">
+    <app-seleccionar ></app-seleccionar>
   </div>
 </div>

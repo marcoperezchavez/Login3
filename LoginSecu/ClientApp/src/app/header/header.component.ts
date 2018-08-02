@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ILogin } from '../../../Models/Login';
 
-import { Routes, RouterModule, Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +9,6 @@ import { Routes, RouterModule, Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public model: ILogin;
   public user: string;
   public contra: string;
   public show = false;
@@ -21,33 +18,31 @@ export class HeaderComponent implements OnInit {
   public isDelete = false;
   public isUpdate = false;
   public isSelect = false;
-  public selection: string;
-
+  public selection = 'insertar';
   title = 'Escuela Secundaria Técnica #39';
 
-  constructor(private router: Router) { }
+  constructor() { }
 
 
   public ngOnInit() {
-    this.selection = 'insertar';
-  }
 
+  }
   toggle() {
     this.show = !this.show;
   }
   selectInsertar() {
     this.selection = 'insertar';
   }
+
   selectEliminar() {
     this.selection = 'eliminar';
-  }
+    }
+
   selectModificar() {
     this.selection = 'modificar';
   }
+
   selectSeleccionar() {
     this.selection = 'seleccionar';
   }
-
-
-
 }
