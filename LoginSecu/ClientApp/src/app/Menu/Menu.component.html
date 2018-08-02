@@ -1,5 +1,16 @@
-
-
 <header-Selector></header-Selector>
 
-
+<div ng-switch="selection">
+  <div ng-switch-when="insertar">
+    <app-insertar></app-insertar>
+  </div>
+  <div ng-switch-when="eliminar">
+    <app-borrar></app-borrar>
+  </div>
+  <div ng-switch-when="modificar">
+    <app-modificar></app-modificar>
+  </div>
+  <div ng-switch-when="seleccionar">
+    <app-seleccionar></app-seleccionar>
+  </div>
+</div>

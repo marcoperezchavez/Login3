@@ -42,6 +42,7 @@ import { BorrarComponent } from './borrar/borrar.component';
 import { InsertarComponent } from './insertar/insertar.component';
 import { ModificarComponent } from './modificar/modificar.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { SeleccionarComponent } from './seleccionar/seleccionar.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     BorrarComponent,
     InsertarComponent,
     ModificarComponent,
-    ContactoComponent
+    ContactoComponent,
+    SeleccionarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

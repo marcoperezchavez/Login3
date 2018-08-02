@@ -2,21 +2,17 @@
   <img *ngIf="!show" class="logo_mobile_nav" src="../assets/img_logocolor2.png" alt="visa">
   <nav>
     <ul>
-      <a href="#">
-        <li mat-button>Logout</li>
-      </a>
-      <a routerLink="/contact-us" routerLinkActive="contact-us">
-        <li mat-button>Contact</li>
-      </a>
-      <a routerLink="/about" routerLinkActive="about">
-        <li mat-button>About Us</li>
+      <a>
+        <li mat-button (click)="selectSeleccionar()">Seleccionar</li>
       </a>
       <a>
-        <li mat-button [matMenuTriggerFor]="menu">Personal&nbsp;&nbsp;</li>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item routerLink="/your-rights" routerLinkActive="your-right">Your Rights</button>
-          <button mat-menu-item routerLink="/faq" routerLinkActive="faq">FAQs</button>
-        </mat-menu>
+        <li mat-button (click)="selectModificar()">Modificar</li>
+      </a>
+      <a>
+        <li mat-button (click)="selectEliminar()">Eliminar</li>
+      </a>
+      <a>
+        <li mat-button (click)="selectInsertar()">Insertar</li>
       </a>
 
     </ul>
