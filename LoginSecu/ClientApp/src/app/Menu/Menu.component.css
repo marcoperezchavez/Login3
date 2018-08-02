@@ -3,7 +3,16 @@
   margin: 0;
   padding: 0;
 }
-
+.content_box {
+  padding: .9em;
+  border: 1px solid #85D4E3;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  margin: .5em;
+  box-shadow: 0 2px 3px rgba(0,0,0, 0.2);
+  margin-top: 2%;
+}
 body {
   font-size: 14px;
   color: #666;
