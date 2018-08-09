@@ -3,48 +3,67 @@
   <div class="row">
 
     <div class="table table-hover">
-      <!--ID no va-->
-
       <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div>Nombre</div>
+        <label for="exampleFormControlInput1">Nombre</label>
         <div> <input class="form-control" type="text" placeholder="Nombre" /></div>
       </div>
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Apellido Paterno</div>
+        <label for="exampleFormControlInput1">Apellido Paterno</label>
         <div> <input class="form-control" type="text" placeholder="Apellido Paterno" /></div>
       </div>
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Apellido Materno</div>
+        <label for="exampleFormControlInput1">Apellido Materno</label>
         <div> <input class="form-control" type="text" placeholder="Apellido Materno" /></div>
       </div>
 
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Grado</div>
-        <div> <input class="form-control" type="text" placeholder="Grado" /></div>
+      <div class="col-3 col-sm-2 col-md-2 col-lg-1">
+        <label for="exampleFormControlSelect1">Grado</label>
+        <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+
+      <div class="col-3 col-sm-2 col-md-2 col-lg-1">
+        <label for="exampleFormControlInput1">Grupo</label>
+        <select class="form-control form-control-lg" id="exampleFormControlSelect2">
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+        </select>
       </div>
 
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Grupo</div>
-        <div> <input class="form-control" type="text" placeholder="Grupo" /></div>
+        <label for="exampleFormControlInput1">Taller</label>
+          <select class="form-control form-control-lg" id="exampleFormControlSelect3">
+            <option>Computación</option>
+            <option>Electricidad</option>
+            <option>Industria del vestir</option>
+            <option>Contabilidad</option>
+            <option>Carpintería</option>
+          </select>
+      </div>
+
+
+      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha de ingreso">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
       </div>
 
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Tallero</div>
-        <div> <input class="form-control" type="text" placeholder="Taller" /></div>
-      </div>
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>FechaDeIngreso</div>
-        <div> <input class="form-control" type="text" placeholder="FechaDeIngreso" /></div>
-      </div>
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Status</div>
+        <label for="exampleFormControlInput1">Status</label>
         <div> <input class="form-control" type="text" placeholder="Status" /></div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <div>Reportes</div>
+        <label for="exampleFormControlInput1">Reportes</label>
         <div> <input class="form-control" type="text" placeholder="Reportes" /></div>
       </div>
 
@@ -55,66 +74,3 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="sample3">
-    <label class="mdl-textfield__label" for="sample3">Text...</label>
-  </div>
-</form>
-
-
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
-
-
-
-<div class="contenedor-formulario">
-  <div class="wrap">
-    <form action="" class="formulario" name="formulario_registro" method="get">
-      <div>
-        <div class="input-group">
-          <input type="text" id="nombre" name="nombre">
-          <label class="label" for="nombre">Nombre:</label>
-        </div>
-        <div class="input-group">
-          <input type="email" id="correo" name="correo">
-          <label class="label" for="correo">Correo:</label>
-        </div>
-        <div class="input-group">
-          <input type="password" id="pass" name="pass">
-          <label class="label" for="pass">Contraseña:</label>
-        </div>
-        <div class="input-group">
-          <input type="password" id="pass2" name="pass2">
-          <label class="label" for="pass2">Repetir Contraseña:</label>
-        </div>
-        <div class="input-group radio">
-          <input type="radio" name="sexo" id="hombre" value="Hombre">
-          <label for="hombre">Hombre</label>
-          <input type="radio" name="sexo" id="mujer" value="Mujer">
-          <label for="mujer">Mujer</label>
-        </div>
-        <div class="input-group checkbox">
-          <input type="checkbox" name="terminos" id="terminos" value="true">
-          <label for="terminos">Acepto los Terminos y Condiciones</label>
-        </div>
-
-        <input type="submit" id="btn-submit" value="Enviar">
-      </div>
-    </form>
-  </div>
-</div>

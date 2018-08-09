@@ -13,7 +13,7 @@ import { LoginComponent } from './Login/login.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCardModule,
@@ -63,7 +63,7 @@ import { SeleccionarComponent } from './seleccionar/seleccionar.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    NoopAnimationsModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
     // Material Design
