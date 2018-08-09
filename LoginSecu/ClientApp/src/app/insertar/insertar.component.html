@@ -1,11 +1,14 @@
 <div>
   Insertar Nuevos Datos del alumno
-  <div class="row">
+  <!--<div class="row">
 
     <div class="table table-hover">
       <div class="col-12 col-sm-6 col-md-6 col-lg-4">
         <label for="exampleFormControlInput1">Nombre</label>
         <div> <input class="form-control" type="text" placeholder="Nombre" /></div>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
       </div>
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
         <label for="exampleFormControlInput1">Apellido Paterno</label>
@@ -71,12 +74,83 @@
     </div>
 
 
+  </div>-->
+ 
+  <div class="table table-hover">
+    <table class="example-full-width" cellspacing="0">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 input-style">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombres">
+      </mat-form-field>
+    </div>
+    <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Apellido Paterno">
+      </mat-form-field>
+    </div>
+    <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Apellido Materno">
+      </mat-form-field>
+    </div>
+    
+    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+      <mat-form-field>
+        <mat-select placeholder="Grado">
+          <mat-option value="option">1</mat-option>
+          <mat-option value="option">2</mat-option>
+          <mat-option value="option">3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+      <mat-form-field>
+        <mat-select placeholder="Grupo">
+          <mat-option value="option">A</mat-option>
+          <mat-option value="option">B</mat-option>
+          <mat-option value="option">C</mat-option>
+          <mat-option value="option">D</mat-option>
+          <mat-option value="option">E</mat-option>
+          <mat-option value="option">F</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+      <mat-form-field>
+        <mat-select placeholder="Taller">
+          <mat-option value="option">Computación</mat-option>
+          <mat-option value="option">Electricidad</mat-option>
+          <mat-option value="option">Industria del vestir</mat-option>
+          <mat-option value="option">Contabilidad</mat-option>
+          <mat-option value="option">Carpintería</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </table>
+
+
+
+    <!--<table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="City">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="State">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>-->
+
   </div>
-</div>
-
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
+  </div>
