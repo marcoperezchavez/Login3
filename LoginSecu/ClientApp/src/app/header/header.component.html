@@ -1,20 +1,36 @@
-  <div class="desktop_nav">
+<div class="desktop_nav">
   <img *ngIf="!show" class="logo_mobile_nav" src="../assets/img_logocolor2.png" alt="visa">
   <nav>
+
+
+
     <ul>
       <a>
-        <li mat-button (click)="selectSeleccionar()">Seleccionar</li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">Reportes</button><mat-menu #menu="matMenu">
+            <button mat-menu-item>Insertar</button>
+            <button mat-menu-item>Eliminar</button>
+            <button mat-menu-item>Buscar</button>
+            <button mat-menu-item>Modificar</button>
+          </mat-menu>
+        </li>
       </a>
       <a>
-        <li mat-button (click)="selectModificar()">Modificar</li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="alumnos">Alumnos</button><mat-menu #alumnos="matMenu">
+            <button mat-menu-item (click)="selectInsertar()">Insertar</button>
+            <button mat-menu-item (click)="selectEliminar()">Eliminar</button>
+            <button mat-menu-item (click)="selectSeleccionar()">Buscar</button>
+            <button mat-menu-item (click)="selectModificar()">Modificar</button>
+          </mat-menu>
+        </li>
       </a>
-      <a>
-        <li mat-button (click)="selectEliminar()">Eliminar</li>
-      </a>
-      <a>
-        <li mat-button (click)="selectInsertar()">Insertar</li>
-      </a>
-
     </ul>
+
+
+
   </nav>
 </div>
+
+
+<!--(click)="selectSeleccionar()"-->

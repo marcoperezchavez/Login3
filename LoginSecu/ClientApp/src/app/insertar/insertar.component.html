@@ -1,133 +1,65 @@
 <div>
   Insertar Nuevos Datos del alumno
-  <!--<div class="row">
-
-    <div class="table table-hover">
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <label for="exampleFormControlInput1">Nombre</label>
-        <div> <input class="form-control" type="text" placeholder="Nombre" /></div>
+  
+  <div class="table table-hover">
+    <table class="example-full-width" cellspacing="0">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 input-style">
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Leave a comment"></textarea>
+          <input matInput placeholder="Nombres">
         </mat-form-field>
       </div>
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <label for="exampleFormControlInput1">Apellido Paterno</label>
-        <div> <input class="form-control" type="text" placeholder="Apellido Paterno" /></div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellido Paterno">
+        </mat-form-field>
       </div>
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <label for="exampleFormControlInput1">Apellido Materno</label>
-        <div> <input class="form-control" type="text" placeholder="Apellido Materno" /></div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellido Materno">
+        </mat-form-field>
       </div>
 
-      <div class="col-3 col-sm-2 col-md-2 col-lg-1">
-        <label for="exampleFormControlSelect1">Grado</label>
-        <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-        </select>
+      <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+        <mat-form-field>
+          <mat-select placeholder="Grado">
+            <mat-option value="option">1</mat-option>
+            <mat-option value="option">2</mat-option>
+            <mat-option value="option">3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+        <mat-form-field>
+          <mat-select placeholder="Grupo">
+            <mat-option value="option">A</mat-option>
+            <mat-option value="option">B</mat-option>
+            <mat-option value="option">C</mat-option>
+            <mat-option value="option">D</mat-option>
+            <mat-option value="option">E</mat-option>
+            <mat-option value="option">F</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
-      <div class="col-3 col-sm-2 col-md-2 col-lg-1">
-        <label for="exampleFormControlInput1">Grupo</label>
-        <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-          <option>A</option>
-          <option>B</option>
-          <option>C</option>
-          <option>D</option>
-          <option>E</option>
-          <option>F</option>
-        </select>
+      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+        <mat-form-field>
+          <mat-select placeholder="Taller">
+            <mat-option value="option">Computación</mat-option>
+            <mat-option value="option">Electricidad</mat-option>
+            <mat-option value="option">Industria del vestir</mat-option>
+            <mat-option value="option">Contabilidad</mat-option>
+            <mat-option value="option">Carpintería</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <label for="exampleFormControlInput1">Taller</label>
-        <select class="form-control form-control-lg" id="exampleFormControlSelect3">
-          <option>Computación</option>
-          <option>Electricidad</option>
-          <option>Industria del vestir</option>
-          <option>Contabilidad</option>
-          <option>Carpintería</option>
-        </select>
-      </div>
-
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
         <mat-form-field>
           <input matInput [matDatepicker]="picker" placeholder="Fecha de ingreso">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <label for="exampleFormControlInput1">Status</label>
-        <div> <input class="form-control" type="text" placeholder="Status" /></div>
-      </div>
-
-      <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-        <label for="exampleFormControlInput1">Reportes</label>
-        <div> <input class="form-control" type="text" placeholder="Reportes" /></div>
-      </div>
-
-
-    </div>
-
-
-  </div>-->
- 
-  <div class="table table-hover">
-    <table class="example-full-width" cellspacing="0">
-    <div class="col-12 col-sm-6 col-md-6 col-lg-4 input-style">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nombres">
-      </mat-form-field>
-    </div>
-    <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Apellido Paterno">
-      </mat-form-field>
-    </div>
-    <div class="col-6 col-sm-4 col-md-4 col-lg-2">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Apellido Materno">
-      </mat-form-field>
-    </div>
-    
-    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
-      <mat-form-field>
-        <mat-select placeholder="Grado">
-          <mat-option value="option">1</mat-option>
-          <mat-option value="option">2</mat-option>
-          <mat-option value="option">3</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
-      <mat-form-field>
-        <mat-select placeholder="Grupo">
-          <mat-option value="option">A</mat-option>
-          <mat-option value="option">B</mat-option>
-          <mat-option value="option">C</mat-option>
-          <mat-option value="option">D</mat-option>
-          <mat-option value="option">E</mat-option>
-          <mat-option value="option">F</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-
-    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
-      <mat-form-field>
-        <mat-select placeholder="Taller">
-          <mat-option value="option">Computación</mat-option>
-          <mat-option value="option">Electricidad</mat-option>
-          <mat-option value="option">Industria del vestir</mat-option>
-          <mat-option value="option">Contabilidad</mat-option>
-          <mat-option value="option">Carpintería</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-  </table>
+    </table>
 
 
 
