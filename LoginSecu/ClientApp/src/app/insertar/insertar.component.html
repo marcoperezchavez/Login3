@@ -39,13 +39,13 @@
 
       <div class="col-6 col-sm-4 col-md-4 col-lg-2">
         <label for="exampleFormControlInput1">Taller</label>
-          <select class="form-control form-control-lg" id="exampleFormControlSelect3">
-            <option>Computación</option>
-            <option>Electricidad</option>
-            <option>Industria del vestir</option>
-            <option>Contabilidad</option>
-            <option>Carpintería</option>
-          </select>
+        <select class="form-control form-control-lg" id="exampleFormControlSelect3">
+          <option>Computación</option>
+          <option>Electricidad</option>
+          <option>Industria del vestir</option>
+          <option>Contabilidad</option>
+          <option>Carpintería</option>
+        </select>
       </div>
 
 
@@ -73,4 +73,10 @@
 
   </div>
 </div>
+
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
 

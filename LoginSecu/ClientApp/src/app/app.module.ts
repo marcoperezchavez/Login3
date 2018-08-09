@@ -35,7 +35,7 @@ import {
   MatSnackBarModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatExpansionModule
+  MatExpansionModule, MatSidenavModule, MatListModule
 } from "@angular/material";
 import { RegistrarComponent } from './registrar/registrar.component';
 import { BorrarComponent } from './borrar/borrar.component';
@@ -43,6 +43,8 @@ import { InsertarComponent } from './insertar/insertar.component';
 import { ModificarComponent } from './modificar/modificar.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { SeleccionarComponent } from './seleccionar/seleccionar.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -59,10 +61,11 @@ import { SeleccionarComponent } from './seleccionar/seleccionar.component';
     InsertarComponent,
     ModificarComponent,
     ContactoComponent,
-    SeleccionarComponent
+    SeleccionarComponent,
+    MainNavComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
@@ -93,7 +96,10 @@ import { SeleccionarComponent } from './seleccionar/seleccionar.component';
       { path: 'counter', component: CounterComponent },
       { path: 'Menu', component: MenuComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    ]),
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
