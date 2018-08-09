@@ -10,6 +10,10 @@ export class BorrarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+  openDialog() {
+    alert("dsfdsfds");
   }
 
 }
