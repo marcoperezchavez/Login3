@@ -13,7 +13,7 @@ export class BorrarComponent implements OnInit {
 
   }
   openDialog() {
-    alert("dsfdsfds");
+    alert('');
   }
 
 }

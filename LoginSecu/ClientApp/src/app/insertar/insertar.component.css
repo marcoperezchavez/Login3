@@ -16,3 +16,14 @@
 .mat-form-field {
    width: 100%;
 }
+
+.card {
+  width: 70%;
+  margin:10px auto;
+  display:block;
+  margin-left: 17%;
+}
+
+.card-header {
+  background-color: burlywood;
+}
