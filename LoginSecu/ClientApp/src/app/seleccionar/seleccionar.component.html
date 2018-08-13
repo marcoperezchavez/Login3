@@ -1,3 +1,70 @@
-<p>
-  seleccionar works!
-</p>
+<div class="card col-10 col-sm-8 col-md-8 col-lg-6">
+
+
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong> Buscar alumno</strong>
+  </h5>
+  <div class="card-body px-lg-5 pt-0">
+    <div class="form-row" cellspacing="0">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellido Paterno">
+        </mat-form-field>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <mat-select placeholder="Grado">
+            <mat-option value="option">1</mat-option>
+            <mat-option value="option">2</mat-option>
+            <mat-option value="option">3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <mat-select placeholder="Grupo">
+            <mat-option value="option">A</mat-option>
+            <mat-option value="option">B</mat-option>
+            <mat-option value="option">C</mat-option>
+            <mat-option value="option">D</mat-option>
+            <mat-option value="option">E</mat-option>
+            <mat-option value="option">F</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <mat-select placeholder="Taller">
+            <mat-option value="option">Computación</mat-option>
+            <mat-option value="option">Electricidad</mat-option>
+            <mat-option value="option">Industria del vestir</mat-option>
+            <mat-option value="option">Contabilidad</mat-option>
+            <mat-option value="option">Carpintería</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha de ingreso">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <mat-select placeholder="Mano">
+            <mat-option value="option">Diestro</mat-option>
+            <mat-option value="option">Zurdo</mat-option>
+            <mat-option value="option">Ambidiestro</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
