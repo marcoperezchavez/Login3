@@ -45,6 +45,10 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { SeleccionarComponent } from './seleccionar/seleccionar.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { InsertarReporteComponent } from './insertar-reporte/insertar-reporte.component';
+import { BorrarReporteComponent } from './borrar-reporte/borrar-reporte.component';
+import { ModificarReporteComponent } from './modificar-reporte/modificar-reporte.component';
+import { BuscarReporteComponent } from './buscar-reporte/buscar-reporte.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +66,11 @@ import { LayoutModule } from '@angular/cdk/layout';
     ModificarComponent,
     ContactoComponent,
     SeleccionarComponent,
-    MainNavComponent
+    MainNavComponent,
+    InsertarReporteComponent,
+    BorrarReporteComponent,
+    ModificarReporteComponent,
+    BuscarReporteComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +102,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
+      { path: 'insertar-reporte', component: InsertarReporteComponent },
       { path: 'Menu', component: MenuComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),

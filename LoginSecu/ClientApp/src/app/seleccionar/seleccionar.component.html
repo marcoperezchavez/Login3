@@ -1,4 +1,4 @@
-<div class="card col-10 col-sm-8 col-md-8 col-lg-6">
+<div class="card col-10 col-sm-8 col-md-8 col-lg-7">
 
 
   <h5 class="card-header info-color white-text text-center py-4">
@@ -6,7 +6,14 @@
   </h5>
   <div class="card-body px-lg-5 pt-0">
     <div class="form-row" cellspacing="0">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+      <div class="col-12 col-sm-12 col-md-6 col-lg-2">
+        <mat-form-field class="example-full-width">
+          <input  [(ngModel)]= "alumno.Id" name ="Id" matInput placeholder="ID">
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Apellido Paterno">
         </mat-form-field>
@@ -37,11 +44,11 @@
       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field>
           <mat-select placeholder="Taller">
-            <mat-option value="option">Computación</mat-option>
+            <mat-option value="option">ComputaciÃ³n</mat-option>
             <mat-option value="option">Electricidad</mat-option>
             <mat-option value="option">Industria del vestir</mat-option>
             <mat-option value="option">Contabilidad</mat-option>
-            <mat-option value="option">Carpintería</mat-option>
+            <mat-option value="option">CarpinterÃ­a</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -52,7 +59,7 @@
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
-    
+
       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field>
           <mat-select placeholder="Mano">
@@ -62,9 +69,42 @@
           </mat-select>
         </mat-form-field>
       </div>
-   
+
+      <button type="button" (click)="buscar()" class="btn btn-create btn-primary">Buscar</button>
     </div>
   </div>
 </div>
 
+<div *ngIf="isValidSearchId" class="card col-10 col-sm-8 col-md-8 col-lg-7">
+  test
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Grado</th>
+        <th scope="col">Grupo</th>
+        <th scope="col">Status</th>
+        <th scope="col">Taller</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr>
+        <th scope="row">{{alumno.id}}</th>
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
+        <td>{{alumno.grado}}</td>
+        <td>{{alumno.grupo}}</td>
+        <td>{{alumno.status}}</td>
+        <td>{{alumno.taller}}</td>
+        <td><button (click)="insertarReporte()" class="btnCrear btn-create btn-primary">
 
+  <img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" />
+</button></td>
+      </tr>
+    </tbody>
+
+</table>
+</div>
