@@ -4,11 +4,11 @@
     <ul>
       <a>
         <li>
-          <button mat-button [matMenuTriggerFor]="menu">Reportes</button><mat-menu #menu="matMenu">
-            <button mat-menu-item>Insertar</button>
-            <button mat-menu-item>Eliminar</button>
-            <button mat-menu-item>Buscar</button>
-            <button mat-menu-item>Modificar</button>
+          <button mat-button [matMenuTriggerFor]="reportes">Reportes</button><mat-menu #reportes="matMenu">
+            <button mat-menu-item (click)="selectInsertarReporte()">Insertar</button>
+            <button mat-menu-item (click)="selectEliminarReporte()">Eliminar</button>
+            <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
+            <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
           </mat-menu>
         </li>
       </a>

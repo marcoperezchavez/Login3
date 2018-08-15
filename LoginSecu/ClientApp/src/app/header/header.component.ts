@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   public isUpdate = false;
   public isSelect = false;
   public selection = 'insertar';
+  public selectionReporte :string;
   title = 'Escuela Secundaria Técnica #39';
 
   constructor() { }
@@ -36,7 +37,7 @@ export class HeaderComponent implements OnInit {
 
   selectEliminar() {
     this.selection = 'eliminar';
-    }
+  }
 
   selectModificar() {
     this.selection = 'modificar';
@@ -45,4 +46,22 @@ export class HeaderComponent implements OnInit {
   selectSeleccionar() {
     this.selection = 'seleccionar';
   }
+
+  selectSeleccionarReporte() {
+    this.selectionReporte = 'seleccionar';
+  }
+
+  selectInsertarReporte() {
+    this.selectionReporte = 'insertar';
+  }
+
+  selectEliminarReporte() {
+    this.selectionReporte = 'eliminar';
+  }
+
+  selectModificarReporte() {
+    this.selectionReporte = 'modificar';
+  }
+
+
 }
