@@ -1,0 +1,41 @@
+.input-style {
+  margin-right: 5%;
+}
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.card {
+  width: 70%;
+  margin: 10px auto;
+  display: block;
+  margin-left: 17%;
+}
+
+.card-header {
+  background-color: burlywood;
+}
+
+.btn {
+  height: 38px;
+  cursor: pointer;
+  width: 24%;
+}
+
+.btnCrear {
+  height: 38px;
+  cursor: pointer;
+  width: 100%;
+}

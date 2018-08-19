@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
-import { AlumnadoGnl } from "./seleccionar/seleccionar.component";
+import { AlumnadoGnl } from "../../Models/AlumnadoGnl";
 
 let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
 let cpParams = new URLSearchParams();
@@ -28,8 +28,8 @@ export class AlumnoService {
   //  return response;
   //}
   async getId(id: number): Promise<AlumnadoGnl> {
-    let response = this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
-    return response;
+    return this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
+
   }
 
 
@@ -43,19 +43,3 @@ export class AlumnoService {
   
 }
 
-
-
-export interface AlumnadoGnl {
-  Id: number;
-  Status: number;
-  Reportes: number;
-  Nombre: string;
-  ApellidoPaterno: string;
-  ApellidoMaterno: string;
-  Grado: number;
-  Grupo: number;
-  FechaDeIngreso: Date;
-  Taller: number;
-  //Domicilio: number;
-  //NombrePadreTutor: number;
-}
