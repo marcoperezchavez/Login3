@@ -6,38 +6,41 @@
     <div class="form-row" cellspacing="0">
       <br />
       <div class="panel panel-warning col-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="col-3 col-sm-2 col-md-1 col-lg-1">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
           <label>ID: <span>{{alumno.id}}</span></label>
         </div>
-        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
-          <label>Nombre: <br/><span>{{alumno.nombre}}</span></label>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Nombre: {{alumno.nombre}}</label>
         </div>
-        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
           <label>Apellido Paterno: <span>{{alumno.apellidoPaterno}}</span></label>
         </div>
-        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
-          <label >Apellido Materno: <span>{{alumno.apellidoMaterno}}</span></label>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <label>Apellido Materno: <span>{{alumno.apellidoMaterno}}</span></label>
         </div>
-
-
       </div>
-
-      <!--<div class="col-3 col-sm-2 col-md-1 col-lg-1">
-        <label class="badge">ID: <span>{{alumno.id}}</span></label>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <mat-select [(ngModel)]= "reporte.nombreReporte" name ="nombreReporte" placeholder="Tipo de reporte">
+            <mat-option value="option">Reporte</mat-option>
+            <mat-option value="option">Citatorio</mat-option>
+            <mat-option value="option">Justificante</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-      <div class="col-4 col-sm-3 col-md-3 col-lg-3">
-        <label class="badge">Nombre: <span>{{alumno.nombre}}</span></label>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field>
+          <input matInput  [(ngModel)]= "reporte.creationDate" name ="creationDate" [matDatepicker]="picker" placeholder="Fecha de creación">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
       </div>
-      <div class="col-4 col-sm-3 col-md-3 col-lg-3">
-        <label class="badge">Apellido Paterno: <span>{{alumno.apellidoPaterno}}</span></label>
-      </div>-->
-     
+      <mat-form-field class="description-report-text-area">
+        <textarea  [(ngModel)]= "reporte.description" name ="description"  matInput placeholder="Descripcion"></textarea>
+      </mat-form-field>
 
 
-
-
-
-      <button type="button" (click)="buscar()" class="btn btn-create btn-primary">Buscar</button>
+      <button type="button" (click)="IngresarReporte()" class="btn btn-create btn-primary">Registrar</button>
     </div>
   </div>
 
