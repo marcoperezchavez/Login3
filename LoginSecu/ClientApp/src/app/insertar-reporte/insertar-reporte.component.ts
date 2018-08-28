@@ -1,9 +1,11 @@
-/// <reference path="../../../models/alumnadognl.ts" />
-/// <reference path="../../../models/inforeportesgnl.ts" />
+
 import { Component, OnInit, ViewChild, AfterContentInit } from '@angular/core';
 import { AlumnadoGnl } from "../../../Models/AlumnadoGnl";
 import { SeleccionarComponent } from "../seleccionar/seleccionar.component";
 import { InfoReportesGnl } from "../../../models/inforeportesgnl";
+import { Router } from '@angular/router';
+import { ReporteService } from "../reporte.service"
+import { AlumnoService } from "../alumno.service";
 
 @Component({
   selector: 'app-insertar-reporte',
@@ -11,10 +13,6 @@ import { InfoReportesGnl } from "../../../models/inforeportesgnl";
   styleUrls: ['./insertar-reporte.component.css']
 })
 export class InsertarReporteComponent implements OnInit {
-
- 
-
-
   //alumno: AlumnadoGnl;
   alumn = new AlumnadoGnl();
   reporte: InfoReportesGnl = null;
@@ -30,9 +28,7 @@ export class InsertarReporteComponent implements OnInit {
     apellidoMaterno: "Cervantes"
   };
 
-  constructor() {
-    
-  }
+  constructor(private alumnadoService: AlumnoService, private router: Router) {}
 
   ngOnInit() {
     this.reporte = new InfoReportesGnl();
@@ -44,8 +40,12 @@ export class InsertarReporteComponent implements OnInit {
     
   }
 
-  IngresarReporte() {
+  public async IngresarReporte(): Promise<void> {
     console.log(this.reporte);
+    this.reporte.IdAlumno = this.alumno.id;
+    var response = await this.alumnadoService.postReport(this.reporte);
+    console.log(this.reporte);
+
   }
 
 }

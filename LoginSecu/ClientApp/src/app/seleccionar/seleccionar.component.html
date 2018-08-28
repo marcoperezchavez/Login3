@@ -71,6 +71,10 @@
       </div>
 
       <button type="button" (click)="buscar()" class="btn btn-create btn-primary">Buscar</button>
+
+    
+
+
     </div>
   </div>
 </div>
@@ -99,10 +103,16 @@
         <td>{{alumno.grupo}}</td>
         <td>{{alumno.status}}</td>
         <td>{{alumno.taller}}</td>
-        <td><button (click)="insertarReporte()" class="btnCrear btn-create btn-primary">
+        <td>
+          <button class="btnCrear btn-create btn-primary" mat-button [matMenuTriggerFor]="reportes"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
+          <mat-menu #reportes="matMenu">
+            <button mat-menu-item (click)="selectEliminarReporte()">Reportes</button>
+            <button mat-menu-item  (click)="insertarReporte()">Insertar</button>
+            <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
+            <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
+          </mat-menu>
+        </td>
 
-  <img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" />
-</button></td>
       </tr>
     </tbody>
 

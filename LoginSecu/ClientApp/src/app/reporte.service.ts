@@ -1,9 +1,7 @@
-/// <reference path="../../models/inforeportesgnl.ts" />
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { AlumnadoGnl } from "../../Models/AlumnadoGnl";
-import { InfoReportesGnl } from "../../Models/InfoReportesGnl";
 
 let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
 let cpParams = new URLSearchParams();
@@ -15,13 +13,11 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AlumnoService {
+export class ReporteService {
   private Alumnado: AlumnadoGnl;
-  
   private usersUrl: string = 'https://localhost:44327/api/Student';
-  private reportUrl: string = 'https://localhost:44327/api/InfoReportes';
   constructor(private httpClient: HttpClient) { }
-  
+
   getAll() {
     let obs = this.httpClient.get(this.usersUrl);
     obs.subscribe((response) => console.log(response));
@@ -31,9 +27,8 @@ export class AlumnoService {
   //  let response = this.httpClient.get <AlumnadoGnl> (this.usersUrl + "/" + id).toPromise();
   //  return response;
   //}
-  public async getId(id: number): Promise<AlumnadoGnl> {
-    var response = this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
-    return response;
+  async getId(id: number): Promise<AlumnadoGnl> {
+    return this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
 
   }
   public async getData(): Promise<AlumnadoGnl> {
@@ -41,8 +36,5 @@ export class AlumnoService {
     return model;
   }
 
-  public async postReport(report: InfoReportesGnl): Promise<InfoReportesGnl> {
-    var response = await this.httpClient.post<InfoReportesGnl>(this.reportUrl, report).toPromise();
-    return response;
-  }
 }
+

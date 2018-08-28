@@ -49,8 +49,10 @@ export class SeleccionarComponent implements OnInit {
 
     localStorage.setItem("idtest", this.alumno.id.toString());
     this.router.navigate(['insertar-reporte']);
-
   }
+
+
+
 }
 
   
