@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
+import { Router } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -18,12 +18,11 @@ export class HeaderComponent implements OnInit {
   public isDelete = false;
   public isUpdate = false;
   public isSelect = false;
-  public selection = 'insertar';
+  public selection = 'seleccionar';
   public selectionReporte :string;
   title = 'Escuela Secundaria Técnica #39';
 
-  constructor() { }
-
+  constructor(private router: Router) { }
 
   public ngOnInit() {
 
@@ -32,18 +31,22 @@ export class HeaderComponent implements OnInit {
     this.show = !this.show;
   }
   selectInsertar() {
+    this.router.navigate(['Menu']);
     this.selection = 'insertar';
   }
 
   selectEliminar() {
+    this.router.navigate(['Menu']);
     this.selection = 'eliminar';
   }
 
   selectModificar() {
+    this.router.navigate(['Menu']);
     this.selection = 'modificar';
   }
 
   selectSeleccionar() {
+    this.router.navigate(['Menu']);
     this.selection = 'seleccionar';
   }
 

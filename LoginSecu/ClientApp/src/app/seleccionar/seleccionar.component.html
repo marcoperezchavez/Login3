@@ -104,15 +104,15 @@
         <td>{{alumno.status}}</td>
         <td>{{alumno.taller}}</td>
         <td>
-          <button class="btnCrear btn-create btn-primary" mat-button [matMenuTriggerFor]="reportes"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
-          <mat-menu #reportes="matMenu">
-            <button mat-menu-item (click)="selectEliminarReporte()">Reportes</button>
+          <button class="btnCrear btn-create btn-primary"  mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
+          <mat-menu #reportes2="matMenu">
+            <button mat-menu-item (click)="getAllReports()">Reportes</button>
             <button mat-menu-item  (click)="insertarReporte()">Insertar</button>
             <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
             <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
           </mat-menu>
         </td>
-
+       
       </tr>
     </tbody>
 

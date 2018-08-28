@@ -49,6 +49,7 @@ import { InsertarReporteComponent } from './insertar-reporte/insertar-reporte.co
 import { BorrarReporteComponent } from './borrar-reporte/borrar-reporte.component';
 import { ModificarReporteComponent } from './modificar-reporte/modificar-reporte.component';
 import { BuscarReporteComponent } from './buscar-reporte/buscar-reporte.component';
+import { AllReportsComponent } from './all-reports/all-reports.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { BuscarReporteComponent } from './buscar-reporte/buscar-reporte.componen
     InsertarReporteComponent,
     BorrarReporteComponent,
     ModificarReporteComponent,
-    BuscarReporteComponent
+    BuscarReporteComponent,
+    AllReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -103,6 +105,7 @@ import { BuscarReporteComponent } from './buscar-reporte/buscar-reporte.componen
       { path: '', component: LoginComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'insertar-reporte', component: InsertarReporteComponent },
+      { path: 'all-reports', component: AllReportsComponent  },
       { path: 'Menu', component: MenuComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),

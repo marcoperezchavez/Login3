@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   { path: "Login", redirectTo: "/Login", pathMatch: "full" },
   { path: "Menu", redirectTo: "/Menu", pathMatch: "full" },
-  { path: "counter", redirectTo: "/Counter", pathMatch: "full" }
+  { path: "counter", redirectTo: "/Counter", pathMatch: "full" },
+  { path: "all-reports", redirectTo: "/all-reports", pathMatch: "full" }
 
 
 ];

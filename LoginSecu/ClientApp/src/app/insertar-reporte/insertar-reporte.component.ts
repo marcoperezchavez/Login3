@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ReporteService } from "../reporte.service"
 import { AlumnoService } from "../alumno.service";
 
+
 @Component({
   selector: 'app-insertar-reporte',
   templateUrl: './insertar-reporte.component.html',
@@ -47,5 +48,38 @@ export class InsertarReporteComponent implements OnInit {
     console.log(this.reporte);
 
   }
+
+  selectInsertar() {
+    console.log(this.router.navigate(['Menu']));
+  }
+
+  selectEliminar() {
+    this.router.navigate(['Menu']);
+  }
+
+  selectModificar() {
+    this.router.navigate(['Menu']);
+  }
+
+  selectSeleccionar() {
+    this.router.navigate(['Menu']);
+  }
+
+  selectSeleccionarReporte() {
+    this.router.navigate(['insertar-reporte']);
+  }
+
+  selectInsertarReporte() {
+    this.router.navigate(['insertar-reporte']);
+  }
+
+  selectEliminarReporte() {
+    this.router.navigate(['insertar-reporte']);
+  }
+
+  selectModificarReporte() {
+    this.router.navigate(['insertar-reporte']);
+  }
+
 
 }
