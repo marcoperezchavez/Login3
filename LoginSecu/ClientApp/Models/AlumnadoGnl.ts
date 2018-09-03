@@ -10,6 +10,8 @@ export class AlumnadoGnl {
   grupo: number;
   fechaDeIngreso: Date;
   taller: number;
-  //Domicilio: number;
-  //NombrePadreTutor: number;
+  domicilio: string;
+  nombrePadreTutor: string;
+  telefono: string;
+  mano :string;
 }

@@ -45,4 +45,8 @@ export class AlumnoService {
     var response = await this.httpClient.post<InfoReportesGnl>(this.reportUrl, report).toPromise();
     return response;
   }
+  public async postAlumno(alumno: AlumnadoGnl): Promise<AlumnadoGnl> {
+    var response = await this.httpClient.post<AlumnadoGnl>(this.usersUrl, alumno).toPromise();
+    return response;
+  }
 }

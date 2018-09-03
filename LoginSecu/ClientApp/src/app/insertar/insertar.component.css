@@ -27,3 +27,8 @@
 .card-header {
   background-color: burlywood;
 }
+.btnCrear {
+  height: 38px;
+  cursor: pointer;
+  width: 100%;
+}
