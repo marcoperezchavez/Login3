@@ -1,5 +1,5 @@
 /// <reference path="../../models/inforeportesgnl.ts" />
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { AlumnadoGnl } from "../../Models/AlumnadoGnl";
@@ -17,6 +17,7 @@ const httpOptions = {
 })
 export class AlumnoService {
   private Alumnado: AlumnadoGnl;
+  alumnosList : any;
   
   private usersUrl: string = 'https://localhost:44327/api/Student';
   private reportUrl: string = 'https://localhost:44327/api/InfoReportes';
@@ -48,5 +49,18 @@ export class AlumnoService {
   public async postAlumno(alumno: AlumnadoGnl): Promise<AlumnadoGnl> {
     var response = await this.httpClient.post<AlumnadoGnl>(this.usersUrl, alumno).toPromise();
     return response;
+  }
+  public async getAllStudents(): Promise<any>{
+    //let obs = this.httpClient.get(this.usersUrl).subscribe(result => 
+    //  this.alumnosList = result
+    //);
+    //await console.log(this.alumnosList);
+    //let obs = await this.httpClient.get(this.usersUrl).subscribe(result =>
+    //    this.alumnosList = result
+    //  );
+    var obs = await this.httpClient.get(this.usersUrl).toPromise();
+    return obs;
+
+
   }
 }

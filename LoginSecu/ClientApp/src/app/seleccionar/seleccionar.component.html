@@ -9,7 +9,7 @@
 
       <div class="col-12 col-sm-12 col-md-6 col-lg-2">
         <mat-form-field class="example-full-width">
-          <input  [(ngModel)]= "alumno.id" name ="id" matInput placeholder="ID">
+          <input [(ngModel)]="alumno.id" name="id" matInput placeholder="ID">
         </mat-form-field>
       </div>
 
@@ -70,9 +70,12 @@
         </mat-form-field>
       </div>
 
+
+
+      <button type="button" (click)="getAllStudents()" class="btn btn-create btn-primary">Todos</button>
       <button type="button" (click)="buscar()" class="btn btn-create btn-primary">Buscar</button>
 
-    
+
 
 
     </div>
@@ -83,38 +86,119 @@
   test
   <table class="table table-striped">
     <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Grado</th>
-        <th scope="col">Grupo</th>
-        <th scope="col">Status</th>
-        <th scope="col">Taller</th>
-        <th scope="col"></th>
-      </tr>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Grado</th>
+      <th scope="col">Grupo</th>
+      <th scope="col">Status</th>
+      <th scope="col">Taller</th>
+      <th scope="col"></th>
+    </tr>
     </thead>
     <tbody >
-      <tr>
-        <th scope="row">{{alumno.id}}</th>
-        <td>{{alumno.nombre}}</td>
-        <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
-        <td>{{alumno.grado}}</td>
-        <td>{{alumno.grupo}}</td>
-        <td>{{alumno.status}}</td>
-        <td>{{alumno.taller}}</td>
-        <td>
-          <button class="btnCrear btn-create btn-primary"  mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
-          <mat-menu #reportes2="matMenu">
-            <button mat-menu-item (click)="getAllReports()">Reportes</button>
-            <button mat-menu-item  (click)="insertarReporte()">Insertar</button>
-            <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
-            <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
-          </mat-menu>
-        </td>
+    <tr>
+      <th scope="row">{{alumno.id}}</th>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
+      <td>{{alumno.grado}}</td>
+      <td>{{alumno.grupo}}</td>
+      <td>{{alumno.status}}</td>
+      <td>{{alumno.taller}}</td>
+      <td>
+        <button class="btnCrear btn-create btn-primary"  mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
+        <mat-menu #reportes2="matMenu">
+          <button mat-menu-item (click)="getAllReports()">Reportes</button>
+          <button mat-menu-item  (click)="insertarReporte()">Insertar</button>
+          <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
+          <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
+        </mat-menu>
+      </td>
        
-      </tr>
+    </tr>
     </tbody>
 
-</table>
+  </table>
+</div>
+
+<!--<div *ngIf="isValidSearchFilters" class="card col-10 col-sm-8 col-md-8 col-lg-7">
+  test
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Grado</th>
+      <th scope="col">Grupo</th>
+      <th scope="col">Status</th>
+      <th scope="col">Taller</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr *ngFor="let alumno of listAlumno">
+      <th scope="row">{{alumno.id}}</th>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
+      <td>{{alumno.grado}}</td>
+      <td>{{alumno.grupo}}</td>
+      <td>{{alumno.status}}</td>
+      <td>{{alumno.taller}}</td>
+      <td>
+        <button class="btnCrear btn-create btn-primary"  mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
+        <mat-menu #reportes2="matMenu">
+          <button mat-menu-item (click)="getAllReports()">Reportes</button>
+          <button mat-menu-item  (click)="insertarReporte()">Insertar</button>
+          <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
+          <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
+        </mat-menu>
+      </td>
+       
+    </tr>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </tbody>
+
+  </table>
+</div>-->
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="listAlumno">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="apellidos">
+      <th mat-header-cell *matHeaderCellDef> apellidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.apellidoPaterno}} {{element.apellidoMaterno}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="grado">
+      <th mat-header-cell *matHeaderCellDef> grado </th>
+      <td mat-cell *matCellDef="let element"> {{element.grado}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="grupo">
+      <th mat-header-cell *matHeaderCellDef> grupo </th>
+      <td mat-cell *matCellDef="let element"> {{element.grupo}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

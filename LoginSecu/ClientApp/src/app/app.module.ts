@@ -29,10 +29,12 @@ import {
   MatMenuModule,
   MatNativeDateModule,
   MatOptionModule,
+  MatPaginator,
   MatProgressSpinnerModule,
   MatRadioModule,
   MatSelectModule,
   MatSnackBarModule,
+  MatTableDataSource,
   MatToolbarModule,
   MatTooltipModule,
   MatExpansionModule, MatSidenavModule, MatListModule
@@ -91,6 +93,7 @@ import { AllReportsComponent } from './all-reports/all-reports.component';
     MatInputModule,
     MatIconModule,
     MatNativeDateModule,
+    MatPaginator,
     MatRadioModule,
     MatToolbarModule,
     MatTooltipModule,
@@ -99,6 +102,7 @@ import { AllReportsComponent } from './all-reports/all-reports.component';
     MatSelectModule,
     MatSnackBarModule,
     MatMenuModule,
+    MatTableDataSource,
     MatExpansionModule,
     FormsModule,
     RouterModule.forRoot([

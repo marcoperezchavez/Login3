@@ -13,9 +13,11 @@ import { AlumnadoGnl } from "../../../Models/AlumnadoGnl";
 })
 export class SeleccionarComponent implements OnInit {
   public alumno: AlumnadoGnl = null;
+  public listAlumno : AlumnadoGnl[];
   public isValidSearchId: boolean = false;
   public al: string;
   public idTempo: number;
+  isValidSearchFilters : boolean;
 
 
 
@@ -27,6 +29,7 @@ export class SeleccionarComponent implements OnInit {
 
   public async ngOnInit() {
     this.alumno = new AlumnadoGnl();
+    this.isValidSearchFilters = false;
 
   }
 
@@ -35,7 +38,7 @@ export class SeleccionarComponent implements OnInit {
     this.alumno = await this.alumnadoService.getId(this.alumno.id);
     let myObj = this.alumno;
     localStorage.setItem("alumnoLS", JSON.stringify(myObj));
-    ////console.log(this.alumno);
+    //console.log(this.alumno);
     this.isValidSearchId = true;
   }
 
@@ -53,6 +56,18 @@ export class SeleccionarComponent implements OnInit {
   getAllReports() {
     localStorage.setItem("idtest", this.alumno.id.toString());
     this.router.navigate(['all-reports']);
+  }
+
+  public async getAllStudents() {
+    console.log("Ingresaste a getAllStudents");
+    var response = await this.alumnadoService.getAllStudents();
+    this.isValidSearchFilters = true;
+    //console.log(response);
+    this.listAlumno = response;
+    console.log("test");
+    console.log(this.listAlumno);
+
+
   }
 
 
