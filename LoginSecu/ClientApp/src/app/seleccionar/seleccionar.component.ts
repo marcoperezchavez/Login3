@@ -35,6 +35,8 @@ export class SeleccionarComponent implements OnInit {
 
   public async buscar(): Promise<void> {
 
+    this.isValidSearchId = false;
+    this.isValidSearchFilters = false;
     this.alumno = await this.alumnadoService.getId(this.alumno.id);
     let myObj = this.alumno;
     localStorage.setItem("alumnoLS", JSON.stringify(myObj));
@@ -59,6 +61,8 @@ export class SeleccionarComponent implements OnInit {
   }
 
   public async getAllStudents() {
+    this.isValidSearchId = false;
+    this.isValidSearchFilters = false;
     console.log("Ingresaste a getAllStudents");
     var response = await this.alumnadoService.getAllStudents();
     this.isValidSearchFilters = true;
