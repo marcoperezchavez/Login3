@@ -13,12 +13,12 @@ import { AlumnadoGnl } from "../../../Models/AlumnadoGnl";
 })
 export class SeleccionarComponent implements OnInit {
   public alumno: AlumnadoGnl = null;
-  public listAlumno : AlumnadoGnl[];
+  public listAlumno: AlumnadoGnl[];
   public isValidSearchId: boolean = false;
   public al: string;
   public idTempo: number;
-  isValidSearchFilters : boolean;
-
+  isValidSearchFilters: boolean;
+  public isGetAll:boolean;
 
 
   //@ViewChild(InsertarReporteComponent) insertarRComponent: InsertarReporteComponent;
@@ -30,6 +30,8 @@ export class SeleccionarComponent implements OnInit {
   public async ngOnInit() {
     this.alumno = new AlumnadoGnl();
     this.isValidSearchFilters = false;
+    localStorage.clear();
+
 
   }
 
@@ -49,16 +51,13 @@ export class SeleccionarComponent implements OnInit {
     var t = this.alumnadoService.getAll();
   }
 
-  insertarReporte() {
+  InsertarNewReport(al: AlumnadoGnl) {
     //alert(this.alumno.id);
 
-    localStorage.setItem("idtest", this.alumno.id.toString());
+    localStorage.setItem("alumnoInsertarReporte", JSON.stringify(al));
     this.router.navigate(['insertar-reporte']);
   }
-  getAllReports() {
-    localStorage.setItem("idtest", this.alumno.id.toString());
-    this.router.navigate(['all-reports']);
-  }
+
 
   public async getAllStudents() {
     this.isValidSearchId = false;
@@ -74,6 +73,16 @@ export class SeleccionarComponent implements OnInit {
 
   }
 
+  public async selectModificarReporte(id: number) {
+    console.log(id);
+  }
+
+  public async  historialReportes(al: AlumnadoGnl) {
+    this.isGetAll = true;
+    localStorage.setItem("alumnoInsertarReporte", JSON.stringify(al));
+    localStorage.setItem("IdGetAllInfoReportAlumno", JSON.stringify(this.isGetAll));
+    this.router.navigate(['insertar-reporte']);
+}
 
 }
 

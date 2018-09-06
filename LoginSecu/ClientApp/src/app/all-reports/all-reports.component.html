@@ -1,3 +1,42 @@
-<p>
-  all-reports works!
-</p>
+<div class="card col-10 col-sm-8 col-md-8 col-lg-7">
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong>Historial</strong>
+  </h5>
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th scope="col">Id Reporte</th>
+      <th scope="col">Alumno</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <!--<th scope="row">{{alumno.id}}</th>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
+      <td>{{alumno.grado}}</td>
+      <td>{{alumno.grupo}}</td>
+      <td>{{alumno.status}}</td>
+      <td>{{alumno.taller}}</td>-->
+      <th scope="row">12321</th>
+      <td>Abril Alexandra Perez Miramontes</td>
+      <td>No entrego tarea</td>
+      <td>02/04/2018</td>
+      <td>
+        <button class="btnCrear btn-create btn-primary" mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png"/></button>
+        <mat-menu #reportes2="matMenu">
+          <button mat-menu-item (click)="getAllReports()">Reportes</button>
+          <button mat-menu-item (click)="insertarReporte()">Insertar</button>
+          <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
+          <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
+        </mat-menu>
+      </td>
+
+    </tr>
+    </tbody>
+
+  </table>
+</div>

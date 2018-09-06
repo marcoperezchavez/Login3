@@ -83,7 +83,6 @@
 </div>
 
 <div *ngIf="isValidSearchId" class="card col-10 col-sm-8 col-md-8 col-lg-7">
-  test
   <table class="table table-striped">
     <thead>
     <tr>
@@ -139,7 +138,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let alumno of listAlumno">
-        <th scope="row">{{alumno.id}}</th>
+        <th scope="row">{{alumno.idAlumno}}</th>
         <td>{{alumno.nombre}}</td>
         <td>{{alumno.apellidoPaterno}} {{alumno.apellidoMaterno}}</td>
         <td>{{alumno.grado}}</td>
@@ -149,10 +148,10 @@
         <td>
           <button class="btnCrear btn-create btn-primary" mat-button [matMenuTriggerFor]="reportes2"><img src="../../assets/outline_add_circle_outline_white_18dp - copia.png" /></button>
           <mat-menu #reportes2="matMenu">
-            <button mat-menu-item (click)="getAllReports()">Reportes</button>
-            <button mat-menu-item (click)="insertarReporte()">Insertar</button>
-            <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
-            <button mat-menu-item (click)="selectModificarReporte()">Modificar</button>
+            <button mat-menu-item (click)="InsertarNewReport(alumno)">Insertar Reporte</button>
+            <button mat-menu-item (click)="historialReportes(alumno)" name="alumno.id">Historial</button>
+            <button mat-menu-item (click)="selectModificarReporte(alumno.id)">Modificar</button>
+            <button mat-menu-item (click)="selectEliminarAlumno(alumno.id)">Eliminar</button>
           </mat-menu>
         </td>
       </tr>

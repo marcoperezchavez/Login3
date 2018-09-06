@@ -35,7 +35,6 @@ export class AlumnoService {
   public async getId(id: number): Promise<AlumnadoGnl> {
     var response = this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
     return response;
-
   }
   public async getData(): Promise<AlumnadoGnl> {
     const model = await this.httpClient.get<AlumnadoGnl>("https://localhost:44327/api/Student").toPromise();
@@ -51,16 +50,13 @@ export class AlumnoService {
     return response;
   }
   public async getAllStudents(): Promise<any>{
-    //let obs = this.httpClient.get(this.usersUrl).subscribe(result => 
-    //  this.alumnosList = result
-    //);
-    //await console.log(this.alumnosList);
-    //let obs = await this.httpClient.get(this.usersUrl).subscribe(result =>
-    //    this.alumnosList = result
-    //  );
     var obs = await this.httpClient.get(this.usersUrl).toPromise();
     return obs;
-
-
   }
+
+  public async getAllReportsById(id: number): Promise<InfoReportesGnl> {
+    var response = this.httpClient.get<InfoReportesGnl>(this.reportUrl + "/" + id).toPromise();
+    return response;
+  }
+
 }

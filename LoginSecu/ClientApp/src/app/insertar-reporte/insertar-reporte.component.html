@@ -45,9 +45,11 @@
       <button type="button" (click)="IngresarReporte()" class="btn btn-create btn-primary">Registrar</button>
     </div>
   </div>
-
-
-
-
-
 </div>
+
+
+<div *ngIf="isGetAllReports">
+  <all-reports></all-reports>
+</div>
+
+

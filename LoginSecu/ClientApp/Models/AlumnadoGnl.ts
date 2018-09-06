@@ -13,5 +13,6 @@ export class AlumnadoGnl {
   domicilio: string;
   nombrePadreTutor: string;
   telefono: string;
-  mano :string;
+  mano: string;
+  idAlumno: number;
 }

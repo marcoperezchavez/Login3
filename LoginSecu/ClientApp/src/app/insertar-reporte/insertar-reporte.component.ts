@@ -14,31 +14,34 @@ import { AlumnoService } from "../alumno.service";
   styleUrls: ['./insertar-reporte.component.css']
 })
 export class InsertarReporteComponent implements OnInit {
-  //alumno: AlumnadoGnl;
+  alumno: AlumnadoGnl;
   alumn = new AlumnadoGnl();
   reporte: InfoReportesGnl = null;
   public id: number;
   public idTest: number;
+  public isGetAllReports:false;
 
-  alumno = {
-    id: 2,
-    status: "Suspendido",
-    reportes: "Citatorio",
-    nombre: "Maria",
-    apellidoPaterno: "Miramontes",
-    apellidoMaterno: "Cervantes"
-  };
+
+  //alumno = {
+  //  id: 2,
+  //  status: "Suspendido",
+  //  reportes: "Citatorio",
+  //  nombre: "Maria",
+  //  apellidoPaterno: "Miramontes",
+  //  apellidoMaterno: "Cervantes"
+  //};
 
   constructor(private alumnadoService: AlumnoService, private router: Router) {}
 
   ngOnInit() {
     this.reporte = new InfoReportesGnl();
+    this.alumno = new AlumnadoGnl();
 
-    //let alumnotest = localStorage.getItem("alumnoLS");
-    //this.alumno = JSON.parse(alumnotest);
-    localStorage.clear();
-    console.log(this.alumno);
-    
+    let alumnoInfoLocal = localStorage.getItem("alumnoInsertarReporte");
+    this.alumno = JSON.parse(alumnoInfoLocal);
+    var resultIsAll = localStorage.getItem("IdGetAllInfoReportAlumno");
+    this.isGetAllReports = JSON.parse(resultIsAll);
+
   }
 
   public async IngresarReporte(): Promise<void> {
