@@ -73,8 +73,13 @@ export class SeleccionarComponent implements OnInit {
 
   }
 
-  public async selectModificarReporte(id: number) {
-    console.log(id);
+  public async selectModificarReporte(al: AlumnadoGnl) {
+  
+    localStorage.clear();
+    localStorage.setItem("alumnoInsertarReporte", JSON.stringify(al));
+    console.log("Boton modificar Alumno");
+    console.log(al);
+    this.router.navigate(['modificar']);
   }
 
   public async  historialReportes(al: AlumnadoGnl) {
@@ -82,8 +87,11 @@ export class SeleccionarComponent implements OnInit {
     localStorage.setItem("alumnoInsertarReporte", JSON.stringify(al));
     localStorage.setItem("IdGetAllInfoReportAlumno", JSON.stringify(this.isGetAll));
     this.router.navigate(['insertar-reporte']);
-}
+  }
+  public async selectEliminarAlumno(id: number) {
+    var response = this.alumnadoService.deleteAlumno(id);
 
+  }
 }
 
   

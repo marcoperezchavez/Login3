@@ -9,86 +9,96 @@
       <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
         <div class="md-form">
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Nombres">
+            <input [(ngModel)]="alumno.nombre" name="nombre" matInput placeholder="Nombres">
           </mat-form-field>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Apellido Paterno">
+          <input [(ngModel)]="alumno.apellidoPaterno" name="apellidoPaterno" matInput placeholder="Apellido Paterno">
         </mat-form-field>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Apellido Materno">
+          <input [(ngModel)]="alumno.apellidoMaterno" name="apellidoMaterno" matInput placeholder="Apellido Materno">
+        </mat-form-field>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+        <mat-form-field>
+          <mat-select [(ngModel)]="alumno.grado" name="grado" placeholder="Grado">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+        <mat-form-field>
+          <mat-select [(ngModel)]="alumno.grupo" name="grupo" placeholder="Grupo">
+            <mat-option value="A">A</mat-option>
+            <mat-option value="B">B</mat-option>
+            <mat-option value="C">C</mat-option>
+            <mat-option value="D">D</mat-option>
+            <mat-option value="E">E</mat-option>
+            <mat-option value="F">F</mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
 
       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field>
-          <mat-select placeholder="Grado">
-            <mat-option value="option">1</mat-option>
-            <mat-option value="option">2</mat-option>
-            <mat-option value="option">3</mat-option>
+          <mat-select [(ngModel)]="alumno.taller" name="taller" placeholder="Taller">
+            <mat-option value="Computación">Computación</mat-option>
+            <mat-option value="Electricidad">Electricidad</mat-option>
+            <mat-option value="Industria del vestir">Industria del vestir</mat-option>
+            <mat-option value="Contabilidad">Contabilidad</mat-option>
+            <mat-option value="Carpintería">Carpintería</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
         <mat-form-field>
-          <mat-select placeholder="Grupo">
-            <mat-option value="option">A</mat-option>
-            <mat-option value="option">B</mat-option>
-            <mat-option value="option">C</mat-option>
-            <mat-option value="option">D</mat-option>
-            <mat-option value="option">E</mat-option>
-            <mat-option value="option">F</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
-        <mat-form-field>
-          <mat-select placeholder="Taller">
-            <mat-option value="option">Computación</mat-option>
-            <mat-option value="option">Electricidad</mat-option>
-            <mat-option value="option">Industria del vestir</mat-option>
-            <mat-option value="option">Contabilidad</mat-option>
-            <mat-option value="option">Carpintería</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
-        <mat-form-field>
-          <input matInput [matDatepicker]="picker" placeholder="Fecha de ingreso">
+          <input matInput [(ngModel)]="alumno.fechaDeIngreso" name="fechaDeIngreso" [matDatepicker]="picker" placeholder="Fecha de ingreso">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Domicilio">
-        </mat-form-field>
-      </div>
-      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Telefono">
-        </mat-form-field>
-      </div>
-      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+      <div class="col-6 col-sm-6 col-md-3 col-lg3">
         <mat-form-field>
-          <mat-select placeholder="Mano">
-            <mat-option value="option">Diestro</mat-option>
-            <mat-option value="option">Zurdo</mat-option>
-            <mat-option value="option">Ambidiestro</mat-option>
+          <mat-select [(ngModel)]="alumno.mano" name="mano" placeholder="Mano">
+            <mat-option value="Diestro">Diestro</mat-option>
+            <mat-option value="Zurdo">Zurdo</mat-option>
+            <mat-option value="Ambidiestro">Ambidiestro</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="md-form">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Nombre del padre o tutor">
-          </mat-form-field>
-        </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="alumno.domicilio" name="domicilio" matInput placeholder="Domicilio">
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="alumno.telefono" name="telefono" matInput placeholder="Telefono">
+        </mat-form-field>
+      </div>
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="alumno.nombrePadreTutor" name="nombrePadreTutor" matInput placeholder="Nombre del padre o tutor">
+        </mat-form-field>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 col-lg3">
+        <mat-form-field>
+          <mat-select [(ngModel)]="alumno.status" name="status" placeholder="Estatus">
+            <mat-option value="Activo">Activo</mat-option>
+            <mat-option value="Suspendido">Suspendido</mat-option>
+            <mat-option value="Baja">Baja</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+        <button class="btnCrear btn-create btn-primary" mat-button (click)="insertarAlumno()">Insertar</button>
       </div>
     </div>
   </div>

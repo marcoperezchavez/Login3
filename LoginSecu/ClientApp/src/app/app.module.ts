@@ -112,6 +112,7 @@ import { AllReportsComponent } from './all-reports/all-reports.component';
       { path: 'all-reports', component: AllReportsComponent  },
       { path: 'Menu', component: MenuComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'modificar', component: ModificarComponent }
     ]),
     LayoutModule,
     MatSidenavModule,

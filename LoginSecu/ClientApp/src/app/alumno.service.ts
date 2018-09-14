@@ -1,6 +1,6 @@
 /// <reference path="../../models/inforeportesgnl.ts" />
 import { Injectable, Component } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { AlumnadoGnl } from "../../Models/AlumnadoGnl";
 import { InfoReportesGnl } from "../../Models/InfoReportesGnl";
@@ -54,9 +54,25 @@ export class AlumnoService {
     return obs;
   }
 
+
+  public async deleteAlumno(id: number) {
+    var response = this.httpClient.delete(this.usersUrl + "/" + id).toPromise().then(this.extractData);
+      console.log("resultado del delete");
+    console.log(response);
+    return response;
+  }
+  private extractData(res: Response) {
+    let body = res.json();
+    return body || {};
+  }
   public async getAllReportsById(id: number): Promise<InfoReportesGnl> {
     var response = this.httpClient.get<InfoReportesGnl>(this.reportUrl + "/" + id).toPromise();
     return response;
   }
 
+  public async deleteReport(id: number) : Promise<any> {
+    let response = this.httpClient.delete(this.reportUrl + '/' + id).toPromise();
+    return response;
+
+  }
 }

@@ -16,12 +16,20 @@ export class AllReportsComponent implements OnInit {
 
   constructor(private alumnadoService: AlumnoService) { }
 
-  ngOnInit() {
+  public async ngOnInit() {
     this.alumno = new AlumnadoGnl();
+    this.reporte = new InfoReportesGnl();
     let alumnoInfoLocal = localStorage.getItem("alumnoInsertarReporte");
     this.alumno = JSON.parse(alumnoInfoLocal);
-    var response = this.alumnadoService.getAllReportsById(this.alumno.id);
+    let response = await this.alumnadoService.getAllReportsById(this.alumno.id);
+    this.reporte = response;
     console.log("Info del reporte");
+    console.log(this.reporte);
+
+  }
+  public async eliminarReports(id: number): Promise<void> {
+    let response = await this.alumnadoService.deleteReport(id);
+    console.log("resultado del delete");
     console.log(response);
   }
 
