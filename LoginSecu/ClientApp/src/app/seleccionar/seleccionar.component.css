@@ -38,3 +38,8 @@
   cursor: pointer;
   width: 100%;
 }
+
+.table-content {
+  width: 100%;
+  font-size: 12px;
+}

@@ -39,10 +39,9 @@ export class SeleccionarComponent implements OnInit {
 
     this.isValidSearchId = false;
     this.isValidSearchFilters = false;
-    this.alumno = await this.alumnadoService.getId(this.alumno.id);
-    let myObj = this.alumno;
-    localStorage.setItem("alumnoLS", JSON.stringify(myObj));
-    //console.log(this.alumno);
+    let response = await this.alumnadoService.getId(this.alumno.id);
+    this.listAlumno = response;
+   
     this.isValidSearchId = true;
   }
 

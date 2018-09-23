@@ -28,11 +28,8 @@ export class AlumnoService {
     obs.subscribe((response) => console.log(response));
 
   }
-  //getId(id: string) {
-  //  let response = this.httpClient.get <AlumnadoGnl> (this.usersUrl + "/" + id).toPromise();
-  //  return response;
-  //}
-  public async getId(id: number): Promise<AlumnadoGnl> {
+
+  public async getId(id: number): Promise<any> {
     var response = this.httpClient.get<AlumnadoGnl>(this.usersUrl + "/" + id).toPromise();
     return response;
   }
