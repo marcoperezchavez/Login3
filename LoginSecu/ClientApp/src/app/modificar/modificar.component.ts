@@ -14,7 +14,18 @@ export class ModificarComponent implements OnInit {
   ngOnInit() {
     this.alumno = new AlumnadoGnl();
     let alumnoInfoLocal = localStorage.getItem("alumnoInsertarReporte");
+    
     this.alumno = JSON.parse(alumnoInfoLocal);
+    this.alumno.gradoString = this.alumno.grado.toString();
+    this.alumno.manoString = this.alumno.mano.toString() == "Diestro"
+      ? "Diestro"
+      : this.alumno.mano.toString() == "Zurdo"
+        ? "Zurdo"
+        : this.alumno.mano.toString() == "Ambidiestro"
+          ? "Ambidiestro"
+      : "";
+    //this.alumno.manoString = this.alumno.mano.toString();
+    console.log(this.alumno);
   }
 
 }

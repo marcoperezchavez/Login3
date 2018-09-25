@@ -26,7 +26,7 @@
 
       <div class="col-6 col-sm-6 col-md-2 col-lg-2">
         <mat-form-field>
-          <mat-select [(ngModel)]="alumno.grado" name="grado" placeholder="Grado">
+          <mat-select [(ngModel)]="alumno.gradoString" name="grado" placeholder="Grado">
             <mat-option value="1">1</mat-option>
             <mat-option value="2">2</mat-option>
             <mat-option value="3">3</mat-option>
@@ -45,7 +45,7 @@
           </mat-select>
         </mat-form-field>
       </div>
-
+    
       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
         <mat-form-field>
           <mat-select [(ngModel)]="alumno.taller" name="taller" placeholder="Taller">
@@ -66,7 +66,7 @@
       </div>
       <div class="col-6 col-sm-6 col-md-3 col-lg3">
         <mat-form-field>
-          <mat-select [(ngModel)]="alumno.mano" name="mano" placeholder="Mano">
+          <mat-select [(ngModel)]="alumno.manoString" name="mano" placeholder="Mano">
             <mat-option value="Diestro">Diestro</mat-option>
             <mat-option value="Zurdo">Zurdo</mat-option>
             <mat-option value="Ambidiestro">Ambidiestro</mat-option>

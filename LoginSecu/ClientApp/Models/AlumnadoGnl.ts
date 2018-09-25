@@ -7,6 +7,7 @@ export class AlumnadoGnl {
   apellidoPaterno: string;
   apellidoMaterno: string;
   grado: number;
+  gradoString: string;
   grupo: number;
   fechaDeIngreso: Date;
   taller: number;
@@ -14,5 +15,6 @@ export class AlumnadoGnl {
   nombrePadreTutor: string;
   telefono: string;
   mano: string;
+  manoString: string;
   idAlumno: number;
 }

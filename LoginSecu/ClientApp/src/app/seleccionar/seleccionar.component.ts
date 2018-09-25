@@ -65,7 +65,7 @@ export class SeleccionarComponent implements OnInit {
     var response = await this.alumnadoService.getAllStudents();
     this.isValidSearchFilters = true;
     //console.log(response);
-    this.listAlumno = response;
+    this.listAlumno = response; 
     console.log("test");
     console.log(this.listAlumno);
 
