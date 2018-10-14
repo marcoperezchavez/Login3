@@ -58,6 +58,13 @@ export class AlumnoService {
     console.log(response);
     return response;
   }
+
+  public async modificarAlumno(alum: AlumnadoGnl) {
+    let idA = alum.id;
+    let response = this.httpClient.put(this.usersUrl, alum).toPromise();
+    return response;
+  }
+
   private extractData(res: Response) {
     let body = res.json();
     return body || {};
