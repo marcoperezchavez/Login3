@@ -18,7 +18,7 @@
   font-size: 16PX;
   color:bisque;
   letter-spacing: 1px;
-  padding: 27px;
+  padding: 20px;
   /*padding-block-start: 6px;
   padding-block-end: 6px;*/
   text-align: center;
@@ -69,7 +69,7 @@
   margin: 0 auto;
   margin-top: 20px;
   max-width: 546px;
-  height: 310px;
+  height: 328px;
 }
 
 .Contraseña{

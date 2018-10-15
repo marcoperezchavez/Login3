@@ -34,7 +34,7 @@ export class AlumnoService {
     return response;
   }
   public async getData(): Promise<AlumnadoGnl> {
-    const model = await this.httpClient.get<AlumnadoGnl>("https://localhost:44327/api/Student").toPromise();
+    const model = await this.httpClient.get<AlumnadoGnl>(this.usersUrl).toPromise();
     return model;
   }
 
