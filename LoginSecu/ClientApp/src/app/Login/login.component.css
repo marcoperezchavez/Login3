@@ -19,8 +19,8 @@
   color:bisque;
   letter-spacing: 1px;
   padding: 27px;
-  padding-block-start: 6px;
-  padding-block-end: 6px;
+  /*padding-block-start: 6px;
+  padding-block-end: 6px;*/
   text-align: center;
   border-bottom: 3px solid orange;
   cursor: pointer;
