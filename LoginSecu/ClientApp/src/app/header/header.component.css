@@ -700,7 +700,7 @@ br, .add_4 {
   display: none;
 }
 /* -------------------for tablet landscape and above ------------------- */
-@media screen and (min-width: 992px) {
+
   html, body {
     font: normal 400 16px "Helvetica Neue", Roboto, Arial, "sans-serif";
     -webkit-font-smoothing: antialiased;
@@ -1038,7 +1038,7 @@ br, .add_4 {
   br {
     display: inline;
   }
-}
+
 
 .justify_left {
   text-align: left !important;

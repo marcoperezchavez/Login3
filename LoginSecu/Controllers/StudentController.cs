@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LoginSecu.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,9 +14,10 @@ namespace LoginSecu.Controllers
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<AlumnadoGnl> Get()
         {
-            return new string[] { "Student", "value2" };
+            var studentlisttest = Methods.Helpers.GetAlumnosList();
+            return studentlisttest;
         }
 
         // GET api/<controller>/5

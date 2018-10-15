@@ -19,8 +19,8 @@ export class AlumnoService {
   private Alumnado: AlumnadoGnl;
   alumnosList : any;
   
-  private usersUrl: string = 'https://localhost:44327/api/Student';
-  private reportUrl: string = 'https://localhost:44327/api/InfoReportes';
+  private usersUrl: string = 'http://est39web.azurewebsites.net/api/Student';
+  private reportUrl: string = 'http://est39web.azurewebsites.net/api/InfoReportes';
   constructor(private httpClient: HttpClient) { }
   
   getAll() {
