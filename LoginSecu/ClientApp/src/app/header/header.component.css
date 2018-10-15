@@ -720,7 +720,7 @@ br, .add_4 {
 
     .desktop_nav nav {
       display: block;
-      width: 600px;
+      width: 52%;
       float: right;
       text-align: right;
     }
