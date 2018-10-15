@@ -1,12 +1,17 @@
 
-.title{
-  color:bisque;
+.fondo-blur {
+  background: url (../../assets/Alumnos.jpeg);
+  position: relative;
+  overflow: hidden;
+}
+ 
+.title {
+  color: bisque;
   font-size: 60px;
-  background:rgba(2, 4,4,0.7);
+  background: rgba(2, 4,4,0.7);
   border-top: 3px solid black;
-  border-bottom: 3px solid  black;
+  border-bottom: 3px solid black;
   font-family: roboto;
-
 }
 
 .btn{
