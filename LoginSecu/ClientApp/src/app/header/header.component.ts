@@ -20,7 +20,8 @@ export class HeaderComponent implements OnInit {
   public isSelect = false;
   public selection = 'seleccionar';
   public selectionReporte :string;
-  title = 'Escuela Secundaria Técnica #39';
+  title = 'Escuela Secundaria Técnica 39';
+  titleFelix= 'Félix Flores Gómez';
 
   constructor(private router: Router) { }
 
@@ -64,6 +65,11 @@ export class HeaderComponent implements OnInit {
 
   selectModificarReporte() {
     this.selectionReporte = 'modificar';
+  }
+
+  goToHome() {
+    alert("dsfsdfsdfsdf");
+    this.router.navigate(['/login']);
   }
 
 

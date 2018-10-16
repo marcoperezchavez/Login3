@@ -107,6 +107,7 @@ import { AllReportsComponent } from './all-reports/all-reports.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
+      { path: 'login', component: LoginComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'insertar-reporte', component: InsertarReporteComponent },
       { path: 'all-reports', component: AllReportsComponent  },

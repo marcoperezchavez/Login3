@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild  } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 
+import { Routes, RouterModule, Router } from '@angular/router';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -13,7 +15,7 @@ export class MenuComponent implements OnInit {
   public optionSelected: string;
   @ViewChild(HeaderComponent) header: HeaderComponent;
 
-  public constructor() { }
+  public constructor(private router: Router) { }
 
 
   public ngOnInit() {

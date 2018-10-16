@@ -22,7 +22,8 @@ export class AppComponent {
   public isMainMenu = true;
 
 
-  title = 'Escuela Secundaria Técnica #39';
+  title = 'Escuela Secundaria Técnica 39';
+  titleFelix = 'Félix Flores Gómez';
 
   constructor(private router: Router) {}
 

@@ -22,27 +22,40 @@ namespace LoginSecu.Controllers
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IEnumerable<AlumnadoGnl> Get(int id)
         {
-            return "value";
+            var alumno = Methods.Helpers.GetAlumno(id);
+            return alumno;
         }
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody] AlumnadoGnl alumno)
         {
+            var isSave = Methods.Helpers.SaveAlumno(alumno);
+            if (isSave)
+                return Ok();
+            return BadRequest();
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put([FromBody] AlumnadoGnl alumno)
         {
+            var isUpdated = Methods.Helpers.UpdateAlumno(alumno.Id, alumno);
+            if (isUpdated)
+                return Ok();
+            return BadRequest();
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var isDeleted = Methods.Helpers.DeleteId(id);
+            if (isDeleted)
+                return Ok();
+            return BadRequest();
         }
     }
 }

@@ -1,10 +1,13 @@
 <div class="desktop_nav">
-  <img *ngIf="!show" class="logo_mobile_nav" src="../../assets/logoSecu.png" alt="Logo EST39">
+
+  <img *ngIf="!show" class="logo_mobile_nav" src="../../assets/logoSecu.png" alt="Logo EST39" (click)="goToHome()">
+
   <nav>
     <ul>
       <a>
-        <li>
-          <button mat-button [matMenuTriggerFor]="reportes">Reportes</button><mat-menu #reportes="matMenu">
+        <li class="liMenu">
+          <button mat-button [matMenuTriggerFor]="reportes">Reportes</button>
+          <mat-menu #reportes="matMenu">
             <button mat-menu-item (click)="selectInsertarReporte()">Insertar</button>
             <button mat-menu-item (click)="selectEliminarReporte()">Eliminar</button>
             <button mat-menu-item (click)="selectSeleccionarReporte()">Buscar</button>
@@ -13,8 +16,9 @@
         </li>
       </a>
       <a>
-        <li>
-          <button mat-button [matMenuTriggerFor]="alumnos">Alumnos</button><mat-menu #alumnos="matMenu">
+        <li class="liMenu">
+          <button mat-button [matMenuTriggerFor]="alumnos">Alumnos</button>
+          <mat-menu #alumnos="matMenu">
             <button mat-menu-item (click)="selectInsertar()">Insertar</button>
             <button mat-menu-item (click)="selectEliminar()">Eliminar</button>
             <button mat-menu-item (click)="selectSeleccionar()">Buscar</button>
