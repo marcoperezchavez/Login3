@@ -1,8 +1,8 @@
 
 .fondo-blur {
-  background: url (../../assets/Alumnos.jpeg);
-  position: relative;
-  overflow: hidden;
+  background-image: url('../../assets/alumnos.jpeg');
+  display: block;
+  margin: auto;
 }
  
 .title {

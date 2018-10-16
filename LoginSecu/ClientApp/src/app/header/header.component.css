@@ -741,8 +741,7 @@ br, .add_4 {
           .desktop_nav nav ul a li {
             background: #fff;
             color: #917A24;
-            text-align: left;
-            padding: 0 2em;
+            text-align: center;
             transition: all .3s;
             line-height: 48px;
             padding-top: 9px;
@@ -1132,9 +1131,7 @@ a{
   margin-top: 14px;
   text-align: right;
   padding-right: 30px;
-
-
-span{
+  span{
   margin-right: 15px;
 }
 
@@ -1143,4 +1140,14 @@ img {
 }
 
 }
+}
+
+
+a {
+  width: 120px;
+  text-align: center;
+}
+
+li {
+  text-align: center;
 }
