@@ -3,8 +3,24 @@
   background-image: url('../../assets/alumnos.jpeg');
   display: block;
   margin: auto;
+  height: 900px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-attachment:fixed;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
 }
+
+.fondo-blur-desk {
+  background-image: url('../../assets/alumnos.jpeg');
+  display: block;
+  margin: auto;
+  height: 900px;
  
+}
+
 .title {
   color: bisque;
   font-size: 60px;
@@ -23,7 +39,7 @@
   font-size: 16PX;
   color:bisque;
   letter-spacing: 1px;
-  padding: 20px;
+  padding: 18px;
   /*padding-block-start: 6px;
   padding-block-end: 6px;*/
   text-align: center;
@@ -41,19 +57,18 @@
   transition:all .6s ease;
   font-size: 15px;
   color:white;
-
 }
 
 .input{
   padding: 7px 30px;
 }
-.contenedor{
+.contenedor-desk{
   background: rgba(0, 0, 0, .9);
   border: none;
   cursor: pointer;
-  margin: 5px;
+  margin: 1px;
   width: 100%;
-  height: 55px;
+  height: 40px;
   border-radius: 15px;
   border-bottom: 4px solid  orange;
   transition:all .6s ease;
@@ -61,7 +76,21 @@
   font-family: bold;
   color:white;
   outline: none;
-
+}
+.contenedor {
+  background: rgba(0, 0, 0, .9);
+  border: none;
+  cursor: pointer;
+  margin: 3px;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border-bottom: 4px solid orange;
+  transition: all .6s ease;
+  font-size: 13px;
+  font-family: bold;
+  color: white;
+  outline: none;
 }
 .contenedor-form1{
   background: rgb(0, 0, 0,.8);
@@ -74,21 +103,36 @@
   margin: 0 auto;
   margin-top: 20px;
   max-width: 546px;
-  height: 328px;
+  height: 264px;
 }
 
-.Contraseña{
-  color:white ;
+.contenedor-form1-desk {
+  background: rgb(0, 0, 0,.8);
+  color: #fff;
+  border-radius: 70px;
+  /*padding: 20px;*/
+  /*width: 80%;*/
+  border-top: 5px;
+  float: right;
+  margin-right: 120px;
+  margin-top: 20px;
+  /*max-width: 546px;*/
+  margin-top: 6px;
+  height: 275px;
+}
+
+.Contraseña {
+  color: white;
   font-size: 14px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  border-top:2px solid  rgb(238, 122, 13) ;
-  border-bottom: 2px solid  rgb(238, 122, 13);
-  position:relative;
+  border-top: 2px solid rgb(238, 122, 13);
+  border-bottom: 2px solid rgb(238, 122, 13);
+  position: relative;
   top: 7px;
   right: 7p;
   height: 30px;
   line-height: 25px;
-  transition:all .6s ease;
+  transition: all .6s ease;
 }
 .contra:hover{
   background:rgba(8, 8, 8, 0.10);
@@ -103,4 +147,10 @@
   font-family:roboto;
 }
 
-
+.divPicture {
+  margin-left: 3%;
+  margin-top: 6px;
+}
+.logo-mobile {
+   width: 35%;
+}

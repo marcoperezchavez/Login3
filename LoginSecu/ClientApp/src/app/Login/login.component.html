@@ -1,12 +1,38 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div class="fondo-blur img-fluid" >
+<div class="fondo-blur-desk img-fluid hidden-xs hidden-sm" >
+  <!--<img src="../../assets/Alumnos.jpeg" alt="..." class="img-thumbnail">-->
+  <br />
+  <div class="divPicture col-4 col-sm-4 col-md-3 col-lg-3 ">
+    <img class="img-fluid max-width: 100%" img width="200" src="../../assets/logoSecu.png" />
+  </div>
+  <div class="contenedor-form1-desk  col-md-3 col-lg-3  " style="text-align:center">
+    <form>
+      <!-- <div class="toggle">
+        <span>crear cuenta</span>
+      </div> -->
+      <label for="iniciar sesion" class="iniciarsesion">Iniciar sesión</label>
+      <div class="input">
+        <input type="text" placeholder=" 🔐 Usuario" class="contenedor-desk btn2 " required [(ngModel)]="user" name="name">
+        <input type="password" placeholder=" 🔐 Contraseña" class="contenedor-desk btn2" required [(ngModel)]="contra" name="contra">
+      </div>
+      <div class="input">
+        <button class="btn btn2" (click)="validation()">Ingresar</button>
+      </div>
+      <div class="reset-password">
+        <a href="#" class="Contraseña contra">Olvide mi Contraseña</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="fondo-blur img-fluid hidden-lg hidden-md " >
   <!--<img src="../../assets/Alumnos.jpeg" alt="..." class="img-thumbnail">-->
   <br />
   <div class="text-center ">
-      <img class="img-fluid max-width: 100%" img width="200" src="../../assets/logoSecu.png" />
+    <img class="img-fluid logo-mobile" img width="200" src="../../assets/logoSecu.png" />
   </div>
-  <div class="contenedor-form1 col-10 col-sm-8 col-md-10 col-lg-10  " style="text-align:center">
+  <div class="contenedor-form1 col-8 col-sm-6 col-xs-6 col-md-10 col-lg-10  " style="text-align:center">
     <form>
       <!-- <div class="toggle">
         <span>crear cuenta</span>

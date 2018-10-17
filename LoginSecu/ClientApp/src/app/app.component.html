@@ -1,11 +1,15 @@
 <header>
-  <div class="title">
+  <div class="title hidden-xs hidden-sm">
     {{title}}
-    <br/>
-    <span class="subTitle">
-
+    <div class="subTitle">
       "{{titleFelix}}"
-    </span>
+    </div>
+  </div>
+  <div class="title-mobile hidden-md hidden-lg">
+    {{title}}
+    <div class="subTitle-mobile ">
+      "{{titleFelix}}"
+    </div>
   </div>
 </header>
 <router-outlet></router-outlet>

@@ -13,3 +13,17 @@
   color: bisque;
   font-size: 40px;
 }
+
+.title-mobile {
+  color: bisque;
+  font-size: 40px;
+  background: rgba(2, 4,4,0.7);
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  font-family: roboto;
+  text-align: center;
+}
+.subTitle-mobile {
+  color: bisque;
+  font-size: 20px;
+}

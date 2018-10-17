@@ -68,7 +68,6 @@ export class HeaderComponent implements OnInit {
   }
 
   goToHome() {
-    alert("dsfsdfsdfsdf");
     this.router.navigate(['/login']);
   }
 
